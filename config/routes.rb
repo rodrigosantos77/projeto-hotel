@@ -9,8 +9,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+
+
+
 #rota para a pagina (sobre) about
-get 'home/about'
+#get 'home/sobre'
+get '/sobre', to: 'sobre#index'
 
 
 #adicionando as rotas da pagina index da controller Home

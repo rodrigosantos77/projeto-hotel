@@ -4,6 +4,6 @@ class HomeController < ApplicationController
 
 
   #criancao do metodo sobre
-  def about
+  def sobre
   end
 end

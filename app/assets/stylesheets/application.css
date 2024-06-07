@@ -14,3 +14,43 @@
  *= require_self
  *= require home
  */
+
+
+ /* estilizacao da navbar*/
+ .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
