@@ -3,13 +3,12 @@ source "https://rubygems.org"
 
 ruby "3.0.2"
 
-gem 'webpacker', '~> 6.4'
 gem "rails", "~> 7.1.3", ">= 7.1.3.4"
-gem "sprockets-rails"
+gem "sprockets-rails", "~> 3.5"
 gem "sqlite3", "~> 1.4"
 gem "puma", ">= 5.0"
-gem "importmap-rails"
-gem "turbo-rails"
+gem 'turbolinks', '~> 5'
+gem 'rails-ujs'
 gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[mswin mswin64 mingw x64_mingw jruby]

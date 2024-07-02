@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PaginaWeb</title>
+    <title>Pagina_inicial</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
       <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+      <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
+      <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
   </head>
 
   <body>
 
 <!--  criacao da Navbar da pagina web-->
-<nav class="navbar">
-    <div class="container">
-      <a href="/" class="navbar-brand">PaginaWeb</a>
-      <ul class="navbar-nav">
-        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="/sobre" class="nav-link">Sobre</a></li>
-        <!-- Adicione mais itens de menu conforme necessário -->
-      </ul>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #120b9f;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Novo Horizonte Hotel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Reservas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#servicos">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#contato">Contato</a>
+                </li>
+            </ul>
+        </div>
     </div>
   </nav>
+
+     
+    <!-- criacao do jumbotron topo  -->
+      <div class="jumbotron text-center desc-top" style="background-image: url('<%= asset_path("topo.jpg") %>');">
+        <h2><a name="inicio" class="link"></a></h2>
+        <div class="container">
+          <h1 class="display-4">Hello, world!</h1>
+          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+          <hr class="my-4">
+          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+      </div>
+
 
 
 
