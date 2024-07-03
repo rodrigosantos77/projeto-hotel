@@ -8,13 +8,15 @@
       <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
       <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
       <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMO25p4eFV+r1hXPRx8+SJjHRhClDfZjQ1CXO2M" crossorigin="anonymous">
+
   </head>
 
   <body>
 
 <!--  criacao da Navbar da pagina web-->
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #120b9f;">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark menu" style="background-color: #120b9f;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Novo Horizonte Hotel</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,17 +46,44 @@
       <div class="jumbotron text-center desc-top" style="background-image: url('<%= asset_path("topo.jpg") %>');">
         <h2><a name="inicio" class="link"></a></h2>
         <div class="container">
-          <h1 class="display-4">Hello, world!</h1>
-          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-          <hr class="my-4">
-          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </div>
+                <h1 class="display-4 mb-4">Temos a solução que a sua empresa precisa!</h1>
+                <p class="lead mb-4">Aliquam erat volutpat. Nam facilisis scelerisque velit, sit amet imperdiet est mollis nec.</p>
+                <p>
+                    <a href="#contato" class="btn btn-primary btn-lg">MAIS DETALHES</a> 
+                </p>
+            </div>
       </div>
 
-
-
-
+    <div class="jumbotron servicos">
+            <h2><a name="servicos" class="link"></a></h2>   
+            <div class="container text-center">
+                <h2 class="display-4">Serviços</h2>
+                <p class="lead pb-4">Nam facilisis scelerisque velit, sit amet imperdiet est mollis nec.</p>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="circulo centralizar shadow border border-info">
+                       <!--     <i class="fas fa-hammer"></i>  -->
+                         </div>
+                        <h2 class="mt-4 mb-4">Serviço um</h2>
+                        <p> Aenean sit amet nisl ac ex lobortis condimentum. Aliquam sed ex id felis volutpat lobortis.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="circulo centralizar">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h2 class="mt-4 mb-4">Serviço dois</h2>
+                        <p>Nunc id ante at sem consequat feugiat. Nulla venenatis nulla venenatis vulputate consequat.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="circulo centralizar">
+                          <!--   <i class="fas fa-paint-roller"></i> -->
+                        </div>
+                        <h2 class="mt-4 mb-4">Serviço tres</h2>
+                        <p>Donec dignissim purus sed mi interdum, eu tristique odio vulputate. Nam imperdiet scelerisque.</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
 
     <%= yield %>
   </body>

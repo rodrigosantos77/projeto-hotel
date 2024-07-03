@@ -1,9 +1,62 @@
 
+
+/* variaveis de css  */
+:root{
+	--site-color: #3a7afe;
+	--main-color: #ebeef6;
+	--active-color: #d4def7;
+	--bg-color: #ecedf0;
+	--second-color: #f1f1f1;
+	--third-color: #9fa7bd;
+	--main-bg-color: #192039;
+	--second-bg-color: #1e2746;
+	--third-bg-color: #3a7afe;
+	--fourth-bg-color: #131b38;
+	--primary-color: #0088cc;
+	--success-color: #47a447;
+	--info-color: #5bc0de;
+	--warnning-color: #ed9c28;
+	--danger-color: #d2322d;
+	--dark-roxe-color: #4a2d4a;
+	--light-roxe-color: #c26cc2;
+	--viollet-roxe-color: #ca61cb;	
+}
+
+
 body{
     min-height: 75rem;
     padding-top: 3.5rem;
-    
 }
+
+
+/* Estilização da navbar */ 
+.menu ul li a.nav-link {
+    color:#fff !important;
+}
+.menu ul li a.nav-link:hover {
+    color: var( --third-color) !important;
+  }
+
+
+
+
+
+
+
+
+
+
+/* alinhamento do texto e botao Mais detalhes Jumbotron */
+.jumbotron .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.jumbotron .container p{
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
 
 .desc-top{
     background-repeat: no-repeat;
@@ -11,4 +64,50 @@ body{
     background-size: cover;
     padding-top: 150px;
     padding-bottom: 150px;
+    color: #fff;
+    border-radius: 0px;
+    margin-bottom: 0rem !important;
 }
+
+/* alinhamento do texto do jumbotron na area serviços*/
+.servicos{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color:#fff;
+    border-radius: 0px;
+    margin-bottom: 0rem !important;
+}
+.circulo{
+    width: 140px;
+    height: 140px;
+    background-color: #0095eb;
+    border-radius: 50%;
+    padding-top: 24px;
+    color: #0095eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: aqua;
+    font-size: 2rem;
+}
+.circulo:hover {
+    background-color: #0095eb;
+    color: #fff;
+}
+.centralizar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*
+.servicos .circulo i {
+font-size: 2rem;
+color: white;
+
+}
+*/
+
+
