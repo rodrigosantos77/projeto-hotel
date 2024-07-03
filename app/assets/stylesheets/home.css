@@ -20,6 +20,8 @@
 	--dark-roxe-color: #4a2d4a;
 	--light-roxe-color: #c26cc2;
 	--viollet-roxe-color: #ca61cb;	
+    --circle-defaut: #0000eb;
+    --circle-defaut-hover: #0095eb;
 }
 
 
@@ -80,19 +82,13 @@ body{
 .circulo{
     width: 140px;
     height: 140px;
-    background-color: #0095eb;
+    color: var(--circle-defaut);
     border-radius: 50%;
-    padding-top: 24px;
-    color: #0095eb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    color: aqua;
-    font-size: 2rem;
+    padding-top: 24px;   
+    font-size: 52px;
 }
 .circulo:hover {
-    background-color: #0095eb;
+    background-color: var(--circle-defaut-hover);
     color: #fff;
 }
 .centralizar {
