@@ -96,14 +96,12 @@ body{
     margin-right: auto;
 }
 
-
-
-/*
-.servicos .circulo i {
-font-size: 2rem;
-color: white;
-
+/* formatacao do formulario    */
+.contato{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: var(--dark-roxe-color);
+    margin-bottom: 0rem !important;
+    border-radius: 0rem;    
 }
-*/
-
 
