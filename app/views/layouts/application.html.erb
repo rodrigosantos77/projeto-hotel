@@ -86,19 +86,21 @@
         </div>
 
       <!-- criacao dao formulario da area jumbotrom para contato  -->
-      <div class="jumbotron contato">
+      <div class="jumbotron contato" style="background-image: url('<%= asset_path("back_contato.jpg") %>');">
             <h2><a name="contato" class="link"></a></h2>
             <div class="container">
-                <h2 class="display-4 mb-4 text-center">Contato</h2>
+                <h2 class="display-4 mb-6 text-center">Contato</h2>
+
                 <div class="row">
-                    <div class="col-lg-6">
-                        <h2 class="mt-4 mb-4">Você tem alguma pergunta?</h2>
+                <div class="col-lg-6">
+                <h2 class="mt-4 mb-4">Você tem alguma pergunta?</h2>
                         <p>Endereço: Av. Winston Churchill</p>
                         <p>Ligue para nós: (XX) XXXXX-XXXX</p>
-                        <p>Escreva para nós: webmotors.com.br</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <form>
+                        <p>Escreva para nós: webmotors.com.br</p>     
+
+                </div>
+                <div class="col-lg-6">
+                <form>
                             <div class="form-group">
                                 <label for="nome">Nome</label>
                                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome completo" required>
@@ -117,8 +119,11 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Enviar</button>
                         </form>
-                    </div>                    
                 </div>
+              </div>
+            
+
+
             </div>
         </div>
 

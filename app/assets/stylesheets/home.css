@@ -96,12 +96,17 @@ body{
     margin-right: auto;
 }
 
-/* formatacao do formulario    */
+/* formatacao do formulario */   
 .contato{
     padding-top: 80px;
     padding-bottom: 80px;
-    background-color: var(--dark-roxe-color);
     margin-bottom: 0rem !important;
     border-radius: 0rem;    
+    color: #fff;
 }
 
+    /*background-color: var(--dark-roxe-color); 
+    
+}
+
+*/
