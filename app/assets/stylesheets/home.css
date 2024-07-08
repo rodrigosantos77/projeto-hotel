@@ -97,15 +97,36 @@ body{
 }
 
 /* formatacao do formulario */   
-.contato{
-    padding-top: 80px;
+.jumbotron.contato{
+    background-color: var(--main-bg-color);
+    background-size: cover;
+      background-position: center;
+      color: white;
+      border-radius: 0px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+
+  /*  padding-top: 80px;
     padding-bottom: 80px;
     margin-bottom: 0rem !important;
     border-radius: 0rem;    
     color: #fff;
+    */
 }
-
-    /*background-color: var(--dark-roxe-color); 
+/*
+.jumbotron .form-group {
+    margin-bottom: 1.5rem;
+  }
+  .jumbotron .form-control {
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+  jumbotron .btn-primary {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.25rem;
+  }
+    background-color: var(--dark-roxe-color); 
     
 }
 

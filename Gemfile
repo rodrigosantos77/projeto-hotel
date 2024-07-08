@@ -16,6 +16,8 @@ gem "tzinfo-data", platforms: %i[mswin mswin64 mingw x64_mingw jruby]
 gem "bootsnap", require: false
 gem "bootstrap", "~> 5.3.3"
 gem 'sassc-rails'
+gem 'importmap-rails'
+
 
 
 group :development, :test do
