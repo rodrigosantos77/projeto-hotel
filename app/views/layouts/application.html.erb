@@ -19,7 +19,7 @@
 
   <body>
 
-<!--  criacao da Navbar da pagina web-->
+      <!--criacao da Navbar da pagina web-->
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark menu" style="background-color: #120b9f;">
     <div class="container-fluid">
@@ -46,153 +46,117 @@
     </div>
   </nav>
 
-     
-    <!--criacao do jumbotron topo-->
+  <!-- Conteúdo Principal -->
+  <main>
+      <!-- Jumbotron topo -->
       <div class="jumbotron text-center desc-top" style="background-image: url('<%= asset_path("topo.jpg") %>');">
-                <h2><a name="inicio" class="link"></a></h2>
-                    <div class="container">
-                        <h1 class="display-4 mb-4">Temos a solução que a sua empresa precisa!</h1>
-                        <p class="lead mb-4">Aliquam erat volutpat. Nam facilisis scelerisque velit, sit amet imperdiet est mollis nec.</p>
-                        <p>
-                            <a href="#contato" class="btn btn-primary btn-lg">MAIS DETALHES</a> 
-                        </p>
-                    </div>
+          <div class="container">
+              <h1 class="display-4 mb-4">Temos a solução que a sua empresa precisa!</h1>
+              <p class="lead mb-4">Aliquam erat volutpat. Nam facilisis scelerisque velit, sit amet imperdiet est mollis nec.</p>
+              <p><a href="#contato" class="btn btn-primary btn-lg">MAIS DETALHES</a></p>
+          </div>
       </div>
 
-    <div class="jumbotron servicos">
-            <h2><a name="servicos" class="link"></a></h2>   
-            <div class="container text-center">
-                <h2 class="display-4">Serviços</h2>
-                <p class="lead pb-4">Nam facilisis scelerisque velit, sit amet imperdiet est mollis nec.</p>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="circulo centralizar shadow border border-info">
-                       <i class="fas fa-hammer"></i>
-                         </div>
-                        <h2 class="mt-4 mb-4">Serviço um</h2>
-                        <p> Aenean sit amet nisl ac ex lobortis condimentum. Aliquam sed ex id felis volutpat lobortis.</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="circulo centralizar shadow border border-info">
-                          <i class="fas fa-drafting-compass"></i>
-                        </div>
-                        <h2 class="mt-4 mb-4">Serviço dois</h2>
-                        <p>Nunc id ante at sem consequat feugiat. Nulla venenatis nulla venenatis vulputate consequat.</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="circulo centralizar shadow border border-info">
-                          <i class="fas fa-paint-roller"></i> 
-                        </div>
-                        <h2 class="mt-4 mb-4">Serviço tres</h2>
-                        <p>Donec dignissim purus sed mi interdum, eu tristique odio vulputate. Nam imperdiet scelerisque.</p>
-                    </div>
-                </div>
-            </div>            
-    </div>
+      <!-- Jumbotron serviços -->
+      <div class="jumbotron servicos">
+          <div class="container text-center">
+              <h2 class="display-4">Serviços</h2>
+              <p class="lead pb-4">Nam facilisis scelerisque velit, sit amet imperdiet est mollis nec.</p>
+              <div class="row">
+                  <div class="col-lg-4">
+                      <div class="circulo centralizar shadow border border-info"><i class="fas fa-hammer"></i></div>
+                      <h2 class="mt-4 mb-4">Serviço um</h2>
+                      <p>Aenean sit amet nisl ac ex lobortis condimentum. Aliquam sed ex id felis volutpat lobortis.</p>
+                  </div>
+                  <div class="col-lg-4">
+                      <div class="circulo centralizar shadow border border-info"><i class="fas fa-drafting-compass"></i></div>
+                      <h2 class="mt-4 mb-4">Serviço dois</h2>
+                      <p>Nunc id ante at sem consequat feugiat. Nulla venenatis nulla venenatis vulputate consequat.</p>
+                  </div>
+                  <div class="col-lg-4">
+                      <div class="circulo centralizar shadow border border-info"><i class="fas fa-paint-roller"></i></div>
+                      <h2 class="mt-4 mb-4">Serviço tres</h2>
+                      <p>Donec dignissim purus sed mi interdum, eu tristique odio vulputate. Nam imperdiet scelerisque.</p>
+                  </div>
+              </div>
+          </div>            
+      </div>
 
+      <!-- Jumbotron contato -->
+      <div class="jumbotron contato">
+          <div class="container-lg"> 
+              <h1 class="display-4 text-center">Contato</h1>
+              <div class="row">
+                  <div class="col-lg">
+                      <h2 class="mt-4 mb-4">Você tem alguma pergunta?</h2>
+                      <p>Endereço: Av. XVI  - 1290 - itacoatiara</p>
+                      <p>Ligue para nós: (92) 99392-2122</p>
+                      <p>Escreva para nós: @novohorizontehotel2019@gmail.com</p>         
+                  </div>
+                  <div class="col-lg">
+                      <form>
+                          <div class="form-group">
+                              <label for="nome">Nome</label>
+                              <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome completo" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="email">E-mail</label>
+                              <input type="email" name="email" class="form-control" id="email" placeholder="Seu melhor e-mail" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="assunto">Assunto</label>
+                              <input type="text" name="assunto" class="form-control" id="assunto" placeholder="Assunto da mensagem" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="conteudo">Conteúdo</label>
+                              <textarea name="conteudo" class="form-control" id="conteudo" placeholder="Conteúdo da mensagem" required></textarea>
+                          </div>
+                          <br>
+                          <button type="submit" class="btn btn-outline-light">Enviar</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </main>
         
-            <!--jumbotron contato-->
-          <div class="jumbotron contato">
-                    <h2><a name="contato" class="link"></a></h2>
-                        <div class="container-lg"> 
-                                    <h1 class="display-4 text-center">Contato</h1>
-                                <div class="row">
-                                            <div class="col-lg">
-                                                <h2 class="mt-4 mb-4">Você tem alguma pergunta?</h2>
-                                                <p>Endereço: Av. XVI  - 1290 - itacoatiara</p>
-                                                <p>Ligue para nós: (92) 99392-2122</p>
-                                                <p>Escreva para nós: @novohorizontehotel2019@gmail.com</p>         
-                                            </div>
-                                            <div class="col-lg">
-                                                        <form>
-                                                            <div class="form-group">
-                                                                    <label for="nome">Nome</label>
-                                                                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome completo" required>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                    <label for="email">E-mail</label>
-                                                                    <input type="email" name="email" class="form-control" id="email" placeholder="Seu melhor e-mail" required>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                    <label for="assunto">Assunto</label>
-                                                                    <input type="text" name="assunto" class="form-control" id="assunto" placeholder="Assunto da mensagem" required>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                    <label for="conteudo">Conteúdo</label>
-                                                                    <textarea name="conteudo" class="form-control" id="conteudo" placeholder="Conteúdo da mensagem" required></textarea>
-                                                            </div>
-                                                    </br>
-                                                                    <button type="submit" class="btn btn-outline-light">Enviar</button>
-                                                         </form>
-                                            </div>
-                                </div>
-                <div>
-        </div>
-        <!-- fim contato-->
+  
 
-        <div class="container-fluid rodape">
-          <div class="p-5 text-center">
-                <div class="row">
-                                <div class="col-12 col-sm-12 col-md-4"> 
-                                    <h5> Novo Horizonte Hotel</h5>
-                                        <ul class="ist-unstyled">    
-                                                <li>
-                                                <a href="#" class="link-rodape">Home</a>  
-                                                </li>    
-                                                <li>
-                                                    <a href="#" class="link-rodape">Serviços</a>  
-                                                  </li>
-                                                  <li>
-                                                    <a href="#" class="link-rodape">Descrição</a>  
-                                                  </li>
-                                                  <li>
-                                                    <a href="#" class="link-rodape">Contato</a>  
-                                                  </li>    
-                                      </ul>
+              <!-- fim contato-->
+              <div class="container-fluid rodape">
+              <div class="p-5 text-center">
+                  <div class="row">
+                      <div class="col-12 col-sm-12 col-md-4"> 
+                          <h5>Novo Horizonte Hotel</h5>
+                          <ul class="list-unstyled">    
+                              <li><a href="#" class="link-rodape">Home</a></li>    
+                              <li><a href="#" class="link-rodape">Serviços</a></li>
+                              <li><a href="#" class="link-rodape">Descrição</a></li>
+                              <li><a href="#" class="link-rodape">Contato</a></li>    
+                          </ul>
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-4"> 
+                          <h5>Redes Sociais</h5>
+                          <ul class="list-unstyled">    
+                              <li><a href="#" class="link-rodape">Facebook</a></li>    
+                              <li><a href="#" class="link-rodape">Instagram</a></li>
+                              <li><a href="#" class="link-rodape">Twitter</a></li>
+                              <li><a href="#" class="link-rodape">LinkedIn</a></li>    
+                          </ul>
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-4"> 
+                          <h5>Contato</h5>
+                          <ul class="list-unstyled">    
+                              <li><a href="#" class="link-rodape">Home</a></li>    
+                              <li><a href="#" class="link-rodape">Serviços</a></li>
+                              <li><a href="#" class="link-rodape">Descrição</a></li>
+                              <li><a href="#" class="link-rodape">Contato</a></li>    
+                          </ul>
+                      </div>
+                  </div>      
+              </div>
+          </div>
 
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-4"> 
-                                        <h5> redes Sociais</h5>
-                                                <ul class="ist-unstyled">    
-                                                        <li>
-                                                        <a href="#" class="link-rodape">Home</a>  
-                                                        </li>    
-                                                        <li>
-                                                            <a href="#" class="link-rodape">Serviços</a>  
-                                                          </li>
-                                                          <li>
-                                                            <a href="#" class="link-rodape">Descrição</a>  
-                                                          </li>
-                                                          <li>
-                                                            <a href="#" class="link-rodape">Contato</a>  
-                                                          </li>    
-                                              </ul>
-      
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-4"> 
-                                        <h5> contato 3</h5>
-                                                <ul class="ist-unstyled">    
-                                                        <li>
-                                                        <a href="#" class="link-rodape">Home</a>  
-                                                        </li>    
-                                                        <li>
-                                                            <a href="#" class="link-rodape">Serviços</a>  
-                                                          </li>
-                                                          <li>
-                                                            <a href="#" class="link-rodape">Descrição</a>  
-                                                          </li>
-                                                          <li>
-                                                            <a href="#" class="link-rodape">Contato</a>  
-                                                          </li>    
-                                              </ul>
-      
-                                </div>
-
-                </div>      
-            </div>
-        </div>
-          
 
 
 
