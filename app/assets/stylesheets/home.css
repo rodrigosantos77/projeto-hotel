@@ -22,10 +22,14 @@
 	--viollet-roxe-color: #ca61cb;	
     --circle-defaut: #0000eb;
     --circle-defaut-hover: #0095eb;
+    --circle-rodape: #090662;
 }
 
 
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     min-height: 75rem;
     padding-top: 3.5rem;
 }
@@ -114,20 +118,13 @@ body{
     color: #fff;
     */
 }
-/*
-.jumbotron .form-group {
-    margin-bottom: 1.5rem;
-  }
-  .jumbotron .form-control {
-    padding: 1rem;
-    font-size: 1.25rem;
-  }
-  jumbotron .btn-primary {
-    padding: 0.75rem 1.25rem;
-    font-size: 1.25rem;
-  }
-    background-color: var(--dark-roxe-color); 
-    
-}
-
-*/
+/* formatacao do ropdapé */  
+.rodape{
+    background-color: var(--circle-rodape);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 0rem !important;
+    color: #fff;
+    border-radius: 0px;
+} 
+ 
