@@ -1,0 +1,19 @@
+[33m611b209[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m atualizacoes
+[33mf71ca9f[m Removendo o segredo do arquivo
+[33medf0168[m atualizacao dos commites via ssh
+[33m60f8919[m atualizacao
+[33m5fcf3a3[m Remove sensitive information
+[33md3fa4cf[m atualização de cores na tela principal e formatação da area topo
+[33m241d2fe[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m atualizações do projeto com o uso de sass e isnerção da estilizacao da pagina
+[33m6bca078[m arquivos modificados da pagina para estrutura com o dath sass
+[33mc6b4148[m site finalizado com sucesso e com footer finalizado
+[33mb0ceada[m alteraçoes na telas e ajustes no footer
+[33m9f6a9a9[m parte da area contato esta ajustada no novo padrao do bootstrap
+[33m8d8d644[m area contato falta arrumar
+[33mdc66ff3[m criacao do jumbotrom formulario de perguntas
+[33m55336dd[m atualizaçao da cdn do font-awesome para aparecer os icones
+[33mfb5e27f[m atualizacao do menu nav-bar e insersao do font-awesome ao projeto
+[33mc3ea46f[m atualizacao do css e estilzacao do navbar e da area topo no jumbotron
+[33mc53747c[m atualizacao do bundle e isntalacao do framework bootstrap
+[33mae9cde9[m  criaçao da pagina Sobre do projeto web
+[33m42f6db3[m criaçao da pagina web em ruby com MVC

@@ -1,0 +1,113 @@
+[33mcommit 611b209a45822cc9caa1ccc6e2f57218187db793[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Sat Sep 7 19:57:41 2024 -0400
+
+    atualizacoes
+
+[33mcommit f71ca9f5ca9b3560ca676351b72ea489d765fc68[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Sat Sep 7 19:41:53 2024 -0400
+
+    Removendo o segredo do arquivo
+
+[33mcommit edf0168789299aa1cd0c875c37ca3bd0131b2994[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Sat Sep 7 19:20:34 2024 -0400
+
+    atualizacao dos commites via ssh
+
+[33mcommit 60f8919ac1f32341b719f3364df7ae2b10b3b0bf[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Thu Sep 5 22:43:54 2024 -0400
+
+    atualizacao
+
+[33mcommit 5fcf3a3124cf70ce7f25558ca642863e38fd82ae[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Thu Sep 5 22:41:25 2024 -0400
+
+    Remove sensitive information
+
+[33mcommit d3fa4cf3a345d4ed6d6e09cb8dab3192b0be38f6[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Thu Sep 5 22:21:57 2024 -0400
+
+    atualização de cores na tela principal e formatação da area topo
+
+[33mcommit 241d2feb994d6aba6b1f95a1e78163ba52f25bb4[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Wed Sep 4 23:47:31 2024 -0400
+
+    atualizações do projeto com o uso de sass e isnerção da estilizacao da pagina
+
+[33mcommit 6bca0783ecd0be3aac9ed74774f32867bdd6c826[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Mon Sep 2 22:44:52 2024 -0400
+
+    arquivos modificados da pagina para estrutura com o dath sass
+
+[33mcommit c6b4148fe8935430fd1976535fd3ca9f6975cda6[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Sat Jul 27 19:41:06 2024 -0400
+
+    site finalizado com sucesso e com footer finalizado
+
+[33mcommit b0ceadac90e088a125ced5b894e43d413cce5b92[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Fri Jul 26 21:04:00 2024 -0400
+
+    alteraçoes na telas e ajustes no footer
+
+[33mcommit 9f6a9a9e12fb8ef6f080939fb134076529228d09[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Mon Jul 8 01:18:02 2024 -0400
+
+    parte da area contato esta ajustada no novo padrao do bootstrap
+
+[33mcommit 8d8d644b554b130102ebadd51daffca34c231146[m
+Author: rodrigo santos <rodrigov12.santos@gmail.com>
+Date:   Sat Jul 6 20:59:20 2024 -0400
+
+    area contato falta arrumar
+
+[33mcommit dc66ff3436b81ad3a1f05ba8d3f89a0349d49572[m
+Author: rodrigosantos77 <rodrigov12.santos@gmail.com>
+Date:   Wed Jul 3 20:53:22 2024 -0400
+
+    criacao do jumbotrom formulario de perguntas
+
+[33mcommit 55336dd392e5d1dca7107fa5623eee61d7eb30a1[m
+Author: rodrigosantos77 <rodrigov12.santos@gmail.com>
+Date:   Wed Jul 3 12:27:31 2024 -0400
+
+    atualizaçao da cdn do font-awesome para aparecer os icones
+
+[33mcommit fb5e27f7549ac3f3e45a380bb4d342733ba6ae4e[m
+Author: rodrigosantos77 <rodrigov12.santos@gmail.com>
+Date:   Tue Jul 2 23:02:26 2024 -0400
+
+    atualizacao do menu nav-bar e insersao do font-awesome ao projeto
+
+[33mcommit c3ea46f0e10e942d204fa16ffc12cd40a712d10c[m
+Author: rodrigosantos77 <rodrigov12.santos@gmail.com>
+Date:   Tue Jul 2 12:59:38 2024 -0400
+
+    atualizacao do css e estilzacao do navbar e da area topo no jumbotron
+
+[33mcommit c53747c499d2ecf3313db6bb23f4353ef0c1876d[m
+Author: rodrigosantos77 <rodrigov12.santos@gmail.com>
+Date:   Sun Jun 9 21:28:16 2024 -0400
+
+    atualizacao do bundle e isntalacao do framework bootstrap
+
+[33mcommit ae9cde917095f34fa38eb7cb7bf78a8e15c6fd40[m
+Author: rodrigosantos77 <rodrigov12.santos@gmail.com>
+Date:   Fri Jun 7 19:10:01 2024 -0400
+
+     criaçao da pagina Sobre do projeto web
+
+[33mcommit 42f6db3c7f14c33708abfc93a54ff9e1e5e5785c[m
+Author: rodrigosantos77 <rodrigov12.santos@gmail.com>
+Date:   Fri Jun 7 16:20:04 2024 -0400
+
+    criaçao da pagina web em ruby com MVC
