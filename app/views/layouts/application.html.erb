@@ -7,8 +7,13 @@
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
   <%= javascript_importmap_tags %>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -22,7 +27,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Reservas</a>
@@ -41,75 +46,81 @@
 <!-- Main Content -->
 <main>
   <!-- Jumbotron topo -->
-  <div class="jumbotron text-center desc-top" style="background-image: url('<%= asset_path("topo.jpg") %>');">
-    <div class="container">
-      <h1 class="display-4 mb-4">Temos a solução que a sua empresa precisa!</h1>
-      <p class="lead mb-4">Aliquam erat volutpat. Nam facilisis scelerisque velit, sit amet imperdiet est mollis nec.</p>
-      <p><a href="#contato" class="btn btn-primary btn-lg">MAIS DETALHES</a></p>
+  <section id="topo">
+    <div class="jumbotron text-center desc-top" style="background-image: url('<%= asset_path("topo.jpg") %>');">
+      <div class="container">
+        <h1 class="display-4 mb-4">Temos a solução que a sua empresa precisa!</h1>
+        <p class="lead mb-4">Aliquam erat volutpat. Nam facilisis scelerisque velit, sit amet imperdiet est mollis nec.</p>
+        <p><a href="#contato" class="btn btn-primary btn-lg">MAIS DETALHES</a></p>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- Jumbotron serviços -->
-  <div class="jumbotron servicos">
-    <div class="container text-center">
-      <h2 class="display-4">Serviços</h2>
-      <p class="lead pb-4">Nam facilisis scelerisque velit, sit amet imperdiet est mollis nec.</p>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="circulo centralizar shadow border border-info"><i class="fas fa-hammer"></i></div>
-          <h2 class="mt-4 mb-4">Serviço um</h2>
-          <p>Aenean sit amet nisl ac ex lobortis condimentum. Aliquam sed ex id felis volutpat lobortis.</p>
-        </div>
-        <div class="col-lg-4">
-          <div class="circulo centralizar shadow border border-info"><i class="fas fa-drafting-compass"></i></div>
-          <h2 class="mt-4 mb-4">Serviço dois</h2>
-          <p>Nunc id ante at sem consequat feugiat. Nulla venenatis nulla venenatis vulputate consequat.</p>
-        </div>
-        <div class="col-lg-4">
-          <div class="circulo centralizar shadow border border-info"><i class="fas fa-paint-roller"></i></div>
-          <h2 class="mt-4 mb-4">Serviço tres</h2>
-          <p>Donec dignissim purus sed mi interdum, eu tristique odio vulputate. Nam imperdiet scelerisque.</p>
+  <section id="servicos">
+    <div class="jumbotron servicos">
+      <div class="container text-center">
+        <h2 class="display-4">Serviços</h2>
+        <p class="lead pb-4">Nam facilisis scelerisque velit, sit amet imperdiet est mollis nec.</p>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="circulo centralizar shadow border border-info"><i class="fas fa-hammer"></i></div>
+            <h2 class="mt-4 mb-4">Serviço um</h2>
+            <p>Aenean sit amet nisl ac ex lobortis condimentum. Aliquam sed ex id felis volutpat lobortis.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="circulo centralizar shadow border border-info"><i class="fas fa-drafting-compass"></i></div>
+            <h2 class="mt-4 mb-4">Serviço dois</h2>
+            <p>Nunc id ante at sem consequat feugiat. Nulla venenatis nulla venenatis vulputate consequat.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="circulo centralizar shadow border border-info"><i class="fas fa-paint-roller"></i></div>
+            <h2 class="mt-4 mb-4">Serviço tres</h2>
+            <p>Donec dignissim purus sed mi interdum, eu tristique odio vulputate. Nam imperdiet scelerisque.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Jumbotron contato -->
-  <div class="jumbotron contato">
-    <div class="container-lg">
-      <h1 class="display-4 text-center">Contato</h1>
-      <div class="row">
-        <div class="col-lg">
-          <h2 class="mt-4 mb-4">Você tem alguma pergunta?</h2>
-          <p>Endereço: Av. XVI  - 1290 - Itacoatiara</p>
-          <p>Ligue para nós: (92) 99392-2122</p>
-          <p>Escreva para nós: novohorizontehotel2019@gmail.com</p>
-        </div>
-        <div class="col-lg">
-          <form>
-            <div class="form-group">
-              <label for="nome">Nome</label>
-              <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome completo" required>
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" name="email" class="form-control" id="email" placeholder="Seu melhor e-mail" required>
-            </div>
-            <div class="form-group">
-              <label for="assunto">Assunto</label>
-              <input type="text" name="assunto" class="form-control" id="assunto" placeholder="Assunto da mensagem" required>
-            </div>
-            <div class="form-group">
-              <label for="conteudo">Conteúdo</label>
-              <textarea name="conteudo" class="form-control" id="conteudo" placeholder="Conteúdo da mensagem" required></textarea>
-            </div>
-            <br>
-            <button type="submit" class="btn btn-outline-light">Enviar</button>
-          </form>
+  <section id="contato">
+    <div class="jumbotron contato">
+      <div class="container-lg">
+        <h1 class="display-4 text-center">Contato</h1>
+        <div class="row">
+          <div class="col-lg">
+            <h2 class="mt-4 mb-4">Você tem alguma pergunta?</h2>
+            <p>Endereço: Av. XVI  - 1290 - Itacoatiara</p>
+            <p>Ligue para nós: (92) 99392-2122</p>
+            <p>Escreva para nós: novohorizontehotel2019@gmail.com</p>
+          </div>
+          <div class="col-lg">
+            <form>
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome completo" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Seu melhor e-mail" required>
+              </div>
+              <div class="form-group">
+                <label for="assunto">Assunto</label>
+                <input type="text" name="assunto" class="form-control" id="assunto" placeholder="Assunto da mensagem" required>
+              </div>
+              <div class="form-group">
+                <label for="conteudo">Conteúdo</label>
+                <textarea name="conteudo" class="form-control" id="conteudo" placeholder="Conteúdo da mensagem" required></textarea>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-outline-light">Enviar</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </main>
 
 <!-- Footer -->

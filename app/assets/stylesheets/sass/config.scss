@@ -1,0 +1,34 @@
+
+//variaveis de cores */
+
+$color-white:   #FFFFFF;
+$color-green:   #29AE81;
+$color-marrom:  #A4A4A4;
+$COLOR-MARROM-forte:#A52A2A;
+$color-black:   #000000;
+
+
+
+/* variaveis media-queries */
+
+$media-mobile-s:        320px;
+$media-mobile-m:        375px;
+$media-mobile-l:        425px;
+$media-tablet:          768px;
+$media-desktop:         1024px;
+
+//mixins de fontes
+
+@mixin font-title{
+  font-family: 'Ruda',  sans-serif;
+  font-weight: 700;
+}
+@mixin font-subtitle{
+  font-family: 'Ruda',  sans-serif;
+  font-weight: 500;
+}
+@mixin font-paragraf{
+  font-family: 'Ruda',  sans-serif;
+  font-weight: 400;
+}
+
