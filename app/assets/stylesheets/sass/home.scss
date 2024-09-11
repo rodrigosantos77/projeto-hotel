@@ -1,63 +1,55 @@
+@import "sass/config";
 
 
-/* variaveis de css  */
-:root{
-	--site-color: #3a7afe;
-	--main-color: #ebeef6;
-	--active-color: #d4def7;
-	--bg-color: #ecedf0;
-	--second-color: #f1f1f1;
-	--third-color: #9fa7bd;
-	--main-bg-color: #192039;
-	--second-bg-color: #1e2746;
-	--third-bg-color: #3a7afe;
-	--fourth-bg-color: #131b38;
-	--primary-color: #0088cc;
-	--success-color: #47a447;
-	--info-color: #5bc0de;
-	--warnning-color: #ed9c28;
-	--danger-color: #d2322d;
-	--dark-roxe-color: #4a2d4a;
-	--light-roxe-color: #c26cc2;
-	--viollet-roxe-color: #ca61cb;	
-    --circle-defaut: #0000eb;
-    --circle-defaut-hover: #0095eb;
-    --circle-rodape: #090662;
+
+/*formatação inicial da pagina web*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;   
+/* Estilização da navbar */
+.navbar{
+   background-color: $color-menu-defaut;
 }
-main {
-    flex: 1;
-}
-
-
-/* Estilização da navbar */ 
 .menu ul li a.nav-link {
     color:#fff !important;
 }
 .menu ul li a.nav-link:hover {
-    color: var( --third-color) !important;
+    color: $color-main !important;
   }
 
+/*formatação   do topo da pagina*/
+.topo{
+    width: 100%;
+    margin: auto;
+    .jumbotron.desc-top {
 
+        /*
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        border-radius: 0px;
+        margin-bottom: 0rem !important;
+        padding-top: 150px;
+        padding-bottom: 150px;
 
-
-/* alinhamento do texto e botao Mais detalhes Jumbotron */
-.jumbotron .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+         */
+        .container{
+            h1{
+              @include font-title;
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+    }
 }
-.jumbotron .container p{
-    margin: 0;
-    margin-bottom: 1rem;
-}
+
+
+
 
 
 .desc-top{
@@ -70,6 +62,7 @@ main {
     border-radius: 0px;
     margin-bottom: 0rem !important;
 }
+
 
 /* alinhamento do texto do jumbotron na area serviços*/
 .servicos{
@@ -99,7 +92,7 @@ main {
 /* formatacao do formulario */   
 .jumbotron.contato{
     /*background-color: var(--main-bg-color); */
-    background-image: url('<%= asset_path("back_contato.jpg")%>');
+    background-image: url('<%= asset_path("topo.jpg") %>');
     background-size: cover;
       background-position: center;
       color: white;
