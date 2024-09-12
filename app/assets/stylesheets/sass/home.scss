@@ -1,4 +1,4 @@
-@import "sass/config";
+
 
 
 
@@ -8,124 +8,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Estilização da navbar */
-.navbar{
-   background-color: $color-menu-defaut;
-}
-.menu ul li a.nav-link {
-    color:#fff !important;
-}
-.menu ul li a.nav-link:hover {
-    color: $color-main !important;
-  }
 
-/*formatação   do topo da pagina*/
-.topo{
+html, body{
+    @include font-paragraf;
     width: 100%;
-    margin: auto;
-    .jumbotron.desc-top {
-
-        /*
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        color: #fff;
-        border-radius: 0px;
-        margin-bottom: 0rem !important;
-        padding-top: 150px;
-        padding-bottom: 150px;
-
-         */
-        .container{
-            h1{
-              @include font-title;
-                font-size: 2rem;
-                text-align: center;
-            }
-        }
-    }
+    height: 100%;
+    font-size: 18px;
 }
 
-
-
-
-
-.desc-top{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    color: #fff;
-    border-radius: 0px;
-    margin-bottom: 0rem !important;
+/*formatação do navbar*/
+    .navbar {
+background-color: $color-menu-defaut;
+}
+.menu ul li a .nav-link{
+    color:$color-main !important;
 }
 
-
-/* alinhamento do texto do jumbotron na area serviços*/
-.servicos{
-    padding-top: 80px;
-    padding-bottom: 80px;
-    background-color:#fff;
-    border-radius: 0px;
-    margin-bottom: 0rem !important;
-}
-.circulo{
-    width: 140px;
-    height: 140px;
-    color: var(--circle-defaut);
-    border-radius: 50%;
-    padding-top: 24px;   
-    font-size: 52px;
-}
-.circulo:hover {
-    background-color: var(--circle-defaut-hover);
-    color: #fff;
-}
-.centralizar {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* formatacao do formulario */   
-.jumbotron.contato{
-    /*background-color: var(--main-bg-color); */
-    background-image: url('<%= asset_path("topo.jpg") %>');
-    background-size: cover;
-      background-position: center;
-      color: white;
-      border-radius: 0px;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-/* formatacao do ropdapé */  
-.container-fluid.rodape {
-    margin-top: auto;
-    background-color: var(--circle-rodape);
-    padding-top: 30px;
-    padding-bottom: 30px;
-    color: #fff;
-    border-radius: 0px;
-}
-
-.rodape ul {
-    list-style: none;
-    padding: 0;
-}
-
-.rodape ul li {
-    margin-bottom: 0.5rem;
-}
-
-.rodape ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.rodape ul li a:hover {
-    color: var(--third-color)!important;
-}
- 
- 

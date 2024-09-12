@@ -1,63 +1,9 @@
-
-//variaveis de cores */
-
-$color-white:   #FFFFFF;
-$color-green:   #29AE81;
-$color-marrom:  #A4A4A4;
-$corlor-marron-forte:#A52A2A;
-$color-black:   #000000;
-$color-site: #3a7afe;
-$color-main: #ebeef6;
-$color-active: #d4def7;
-$color-bg: #ecedf0;
-$color-second: #f1f1f1;
-$color-third: #9fa7bd;
-$color-main-bg: #192039;
-$color-second-bg: #1e2746;
-$color-third-bg: #3a7afe;
-$color-footer-bg: #131b38;
-$color-primary: #0088cc;
-$color-success: #47a447;
-$color-info: #5bc0de;
-$color-warnning: #ed9c28;
-$color-danger: #d2322d;
-$color-roxo-dark: #4a2d4a;
-$color-light-roxe-color: #c26cc2;
-$color-viollet-roxe-color: #ca61cb;
-$color-menu-defaut: #0000eb;
-$color-circle-defaut-hover: #0095eb;
-$color-circle-rodape: #090662;
-
-
-
-
-/* variaveis media-queries */
-
-$media-mobile-s:        320px;
-$media-mobile-m:        375px;
-$media-mobile-l:        425px;
-$media-tablet:          768px;
-$media-desktop:         1024px;
-
-
-//mixins de fontes
-
-@mixin font-title{
-  font-family: 'Ruda',  sans-serif;
-  font-weight: 700;
-}
-@mixin font-subtitle{
-  font-family: 'Ruda',  sans-serif;
-  font-weight: 500;
-}
-@mixin font-paragraf{
-  font-family: 'Ruda',  sans-serif;
-  font-weight: 400;
-}
-
-
-
-
+@charset "UTF-8";
+/*formatação inicial da pagina web*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 /* Estilização da navbar
 .navbar{
@@ -91,7 +37,6 @@ $media-desktop:         1024px;
     margin-bottom: 0rem !important;
 }
  */
-
 /* alinhamento do texto do jumbotron na area serviços
 .servicos{
     padding-top: 80px;
@@ -105,7 +50,7 @@ $media-desktop:         1024px;
     height: 140px;
     color:$color-circle-defaut-hover;
     border-radius: 50%;
-    padding-top: 24px;
+    padding-top: 24px;   
     font-size: 52px;
 }
 .circulo:hover {
@@ -158,3 +103,4 @@ $media-desktop:         1024px;
 }
  */
 
+/*# sourceMappingURL=home.css.map */
