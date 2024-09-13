@@ -32,3 +32,14 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+#codigo para atualizar a aplicacao automaticamante
+group :development do
+  gem 'rack-livereload'
+end
+
+#comando servidor para ativar as modificações em tempo real
+group :development do
+  gem 'spring'
+end
+

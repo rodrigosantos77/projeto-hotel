@@ -78,4 +78,7 @@ Rails.application.configure do
   config.assets.debug = true
   config.assets.digest = false
   config.assets.raise_runtime_errors = true
+
+  # Adicionar LiveReload para atualização automática no navegador
+  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
 end
