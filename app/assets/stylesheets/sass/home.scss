@@ -8,19 +8,30 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html, body{
     @include font-paragraf;
     width: 100%;
     height: 100%;
     font-size: 18px;
 }
-
 /*formatação do navbar*/
     .navbar {
-background-color: $color-green;
+background-color: $color-menu-defaut;
 }
 .menu ul li a .nav-link{
     color:$color-main !important;
 }
+
+/*formatação do topo do site*/
+
+
+   .desc-topo{
+       background-color: $color-green;
+
+   }
+
+
+
+
+
 
