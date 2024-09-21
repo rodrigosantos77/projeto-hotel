@@ -24,14 +24,36 @@ background-color: $color-menu-defaut;
 
 /*formatação do topo do site*/
 
-
    .desc-topo{
-       background-color: $color-green;
-
+     background-image: url(asset-path('topo.jpg'));
+       background-position: center;
+       background-size: cover;
+     background-repeat: no-repeat;
+       padding-top: 150px;
+       border-radius: 0px;
+       margin-bottom: 0rem !important;
+       color: $color-second;
+   h1{
+       @include font-title;
+       font-weight: bold;
+       rounded: 0;
+   }
+    p{
+     @include font-subtitle;
+        font-size: 20px;
+    }
    }
 
+/*formatação da Area serciços site*/
 
+    .servicos{
+      background-color:$color-bg;
+      border-radius: 0px;
+      margin-bottom: 0rem !important;
+      padding-top: 80px;
+      padding-bottom: 80px;
+      rounded:0;
 
-
+    }
 
 
