@@ -9,10 +9,11 @@
     box-sizing: border-box;
 }
 html, body{
-    @include font-paragraf;
-    width: 100%;
-    height: 100%;
-    font-size: 18px;
+  font-size: 16px;
+  font-family: 'Ruda', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
 }
 /*formatação do navbar*/
     .navbar {
@@ -24,19 +25,12 @@ background-color: $color-menu-defaut;
 
 /*formatação do topo do site*/
 
-   .desc-topo{
-     background-image: url(asset-path('topo.jpg'));
-       background-position: center;
-       background-size: cover;
-     background-repeat: no-repeat;
-       padding-top: 150px;
-       border-radius: 0px;
-       margin-bottom: 0rem !important;
-       color: $color-second;
+   .container {
+
    h1{
        @include font-title;
        font-weight: bold;
-       rounded: 0;
+
    }
     p{
      @include font-subtitle;

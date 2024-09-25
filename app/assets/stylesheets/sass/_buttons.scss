@@ -1,0 +1,17 @@
+
+/* Botao Visualizar Todos estilzação*/
+.btn-orange-outline {
+  color: $color-warnning;
+  background-color: transparent;
+  outline: 2px solid $color-warnning;
+  box-shadow: none;
+  font-size: 1rem;
+  font-family: 'Ruda', sans-serif;
+  font-weight: 400;
+}
+.btn-orange-outline:hover {
+  color: $color-main;
+  background-color:$color-warnning;
+  outline: none;
+  border-radius: 0px;
+}

@@ -1,0 +1,11 @@
+
+/* variaveis e estilizacao de backgrounds */
+
+.background-banner {
+  width: 100%;
+  height: 50%;
+  background-image: url(asset-path('topo.jpg'));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
