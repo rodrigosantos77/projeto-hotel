@@ -25,18 +25,7 @@ background-color: $color-menu-defaut;
 
 /*formatação do topo do site*/
 
-   .container {
 
-   h1{
-       @include font-title;
-       font-weight: bold;
-
-   }
-    p{
-     @include font-subtitle;
-        font-size: 20px;
-    }
-   }
 
 /*formatação da Area serciços site*/
 
@@ -47,7 +36,6 @@ background-color: $color-menu-defaut;
       padding-top: 80px;
       padding-bottom: 80px;
       rounded:0;
-
     }
 
 

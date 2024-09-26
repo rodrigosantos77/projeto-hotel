@@ -1,9 +1,9 @@
 
 /* Botao Visualizar Todos estilzação*/
 .btn-orange-outline {
-  color: $color-warnning;
+  color: $color-orange;
   background-color: transparent;
-  outline: 2px solid $color-warnning;
+  outline: 2px solid $color-orange;
   box-shadow: none;
   font-size: 1rem;
   font-family: 'Ruda', sans-serif;
@@ -11,7 +11,38 @@
 }
 .btn-orange-outline:hover {
   color: $color-main;
-  background-color:$color-warnning;
+  background-color:$color-orange;
   outline: none;
   border-radius: 0px;
 }
+/*  BOTAO 2 DO TOPO */
+.btn-topo-outline {
+  color: $color-text;
+  background-color: transparent;
+  outline: 2px solid $color-third-bg;
+  box-shadow: none;
+  font-size: 1rem;
+  font-family: 'Ruda', sans-serif;
+  font-weight: 400;
+}
+.btn-topo-outline:hover {
+  color: $color-main;
+  background-color:$color-main-bg;
+  outline: none;
+  border-radius: 0px;
+}
+/* botao do card */
+.btn-orange {
+  color: $color-white;
+  background-color:$color-orange;
+  outline: none;
+  box-shadow: none;
+  font-size: 1rem;
+  font-family: 'Ruda', sans-serif;
+  font-weight: 400;
+}
+.btn-orange:hover {
+  color: $color-white;
+  background-color:$color-orange;
+}
+
