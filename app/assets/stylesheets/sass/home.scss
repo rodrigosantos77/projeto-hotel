@@ -17,14 +17,21 @@ html, body{
 }
 /*formatação do navbar*/
     .navbar {
-background-color: $color-menu-defaut;
+background-color: $color-roxe-01;
 }
 .menu ul li a .nav-link{
     color:$color-main !important;
 }
 
 /*formatação do topo do site*/
+.container {
+  h1 {
+    @include font-title;
+    color:$color-contrast-dark;
+    box-shadow: $color-roxe-03;
+  }
 
+}
 
 
 /*formatação da Area serciços site*/

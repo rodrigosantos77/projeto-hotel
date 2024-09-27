@@ -3,10 +3,11 @@
 
 .background-banner {
   width: 100%;
-  height: 50%;
-  background-image: url(asset-path('topo.jpg'));
+  height: 100%;
+  background-image: image-url('banners/banner-home.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: $color-text;
 }
+

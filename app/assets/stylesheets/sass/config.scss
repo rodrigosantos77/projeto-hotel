@@ -27,6 +27,13 @@ $color-viollet-roxe-color: #ca61cb;
 $color-menu-defaut: #0000eb;
 $color-circle-defaut-hover: #0095eb;
 $color-circle-rodape: #090662;
+$color-roxe-01: #630097;
+$color-roxe-02: #7f00b2;
+$color-roxe-03: #5c0090;
+$verde-limao: #359510;
+$color-bg-footer-roxedark: #1b003a;
+
+
 
 
 
@@ -45,6 +52,7 @@ $media-desktop:         1024px;
 @mixin font-title{
   font-family: 'Ruda',  sans-serif;
   font-weight: 700;
+
 }
 @mixin font-subtitle{
   font-family: 'Ruda',  sans-serif;

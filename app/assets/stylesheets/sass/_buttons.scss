@@ -19,7 +19,7 @@
 .btn-topo-outline {
   color: $color-text;
   background-color: transparent;
-  outline: 2px solid $color-third-bg;
+  outline: 2px solid $color-roxe-02;
   box-shadow: none;
   font-size: 1rem;
   font-family: 'Ruda', sans-serif;
@@ -27,14 +27,14 @@
 }
 .btn-topo-outline:hover {
   color: $color-main;
-  background-color:$color-main-bg;
+  background-color:$color-roxe-02;
   outline: none;
   border-radius: 0px;
 }
 /* botao do card */
 .btn-orange {
   color: $color-white;
-  background-color:$color-orange;
+  background-color:$color-roxe-03;
   outline: none;
   box-shadow: none;
   font-size: 1rem;
@@ -43,6 +43,9 @@
 }
 .btn-orange:hover {
   color: $color-white;
-  background-color:$color-orange;
+  background-color:$color-roxe-03;
 }
+/* fim do Topo */
+
+
 
