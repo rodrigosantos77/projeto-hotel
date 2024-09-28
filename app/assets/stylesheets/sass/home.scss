@@ -30,11 +30,15 @@ background-color: $color-roxe-01;
     color:$color-contrast-dark;
     box-shadow: $color-roxe-03;
   }
+  p{
+    @include font-subtitle;
+    color:$color-contrast-dark;
+    font-size: 25px;
+  }
 
 }
 
-
-/*formatação da Area serciços site*/
+/*formatação da Area serciços site
 
     .servicos{
       background-color:$color-bg;
@@ -44,5 +48,22 @@ background-color: $color-roxe-01;
       padding-bottom: 80px;
       rounded:0;
     }
+*/
+  .webview {
+      .container{
 
+        h2{
+        @include font-title;
+          color:$color-contrast-dark;
+          font-size: 35px;
+
+        }
+
+
+
+      }
+
+
+
+  }
 
