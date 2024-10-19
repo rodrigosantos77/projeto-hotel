@@ -9,9 +9,8 @@
     box-sizing: border-box;
 }
 html, body{
-  font-size: 16px;
-  font-family: 'Ruda', sans-serif;
-  font-weight: 400;
+  @include font-paragraf;
+  font-size: 18px;
   width: 100%;
   height: 100%;
 }
@@ -24,41 +23,93 @@ background-color: $color-roxe-01;
 }
 
 /*formatação do topo do site*/
-.container {
-  h1 {
-    @include font-title;
-    color:$color-contrast-dark;
-    box-shadow: $color-roxe-03;
-  }
-  p{
-    @include font-subtitle;
-    color:$color-contrast-dark;
-    font-size: 25px;
-  }
+.topo{
+     
+
+  .webview{
+    width: 100%;
+    margin: auto;  
+
+    .container{
+
+      h1{
+        font-size: 30px;
+        @include font-title;
+        color: $color-roxe-03;
+        padding: 50px;
+        
+      }
+      p{
+        font-size: 1rem;
+        color: $color-black;
+      }
+
+    }
+  }  
+
+
 
 }
 
-/*formatação da Area serciços site
-
+/*formatação da Area serciços site*/
     .servicos{
-      background-color:$color-bg;
-      border-radius: 0px;
-      margin-bottom: 0rem !important;
-      padding-top: 80px;
-      padding-bottom: 80px;
-      rounded:0;
-    }
-*/
-  .webview {
-      .container{
+          .webview {
+            .container{
 
-        h2{
-        @include font-title;
-          color:$color-contrast-dark;
-          font-size: 35px;
+                h2{
+                @include font-title;
+                  color:$color-roxe-03;
+                  font-size: 30px;
+                }
+
+                .title-card{
+                    .card-body{
+
+                      h3{
+                        @include font-subtitle;
+                        font-size: 1rem;
+                        color: $color-contrast-dark;
+                      }
+
+                    }
+                }
+
+            }
         }
-      }
-  }
+    }
+      
 
   /*area COntato */
+  
+    #contato {
+      .container {
+          .title{
+            h2{
+              @include font-title;
+              font-size: 35px;
+              color:$color-contrast-dark;
+             }
+          }
+          
+          .subtitle{
+            h4{
+              @include font-subtitle;
+              font-size: 18px;
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+              color:$color-contrast-dark;
+            }
+            p{
+              @include font-subtitle;
+              font-size: 18px;
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+              color:$color-contrast-dark;
+            }
+          }
+      }
+
+  }
+  
+  
    
