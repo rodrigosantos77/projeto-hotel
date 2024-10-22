@@ -68,7 +68,7 @@ background-color: $color-roxe-01;
                       h3{
                         @include font-subtitle;
                         font-size: 1rem;
-                        color: $color-contrast-dark;
+                        color: $color-roxe-02;
                       }
 
                     }
@@ -87,7 +87,7 @@ background-color: $color-roxe-01;
             h2{
               @include font-title;
               font-size: 35px;
-              color:$color-contrast-dark;
+              color:$color-roxe-02;
              }
           }
           
@@ -110,6 +110,39 @@ background-color: $color-roxe-01;
       }
 
   }
+  /*form estilizacao */
+
+#contato {
+
+        .container{
+                .formulario{
+                    form {
+                        .controls {
+                            label {
+                              @include font-paragraf;
+                              font-weight: bold;
+                              color: $color-roxe-03;
+                            }
+                            
+                            input, textarea {
+                              @include font-paragraf;
+                              width: 100%;
+                              padding: 10px;
+                              border: 1px solid $color-roxe-03;
+                              border-radius: 2px;
+                              color: $color-roxe-01; /* Ajuste de cor do texto */
+                            }
+                            &:focus {
+                              border-color: $color-roxe-02; /* Cor na borda ao focar */
+                              outline: none;
+                            }  
+                        }
+                    }
+                 }     
+
+  }  
+}
+
   
   
    

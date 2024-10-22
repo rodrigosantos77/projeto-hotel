@@ -165,35 +165,41 @@
                         </div>                     
                     </div>
                    
-                    <div class="col-md-6 formulario"> 
+                    <div class="col-md-6 formulario">   
                             <form action="/envia-email" method="POST">
                                   <div class="mb-3">
                                         <div class="controls">
-                                        <label for="nome" class="form-label">Nome:</label>
-                                        <input type="text" id="nome" class="form-control" name="nome" required>
+                                                <label for="nome" class="form-label">Nome:</label>
+                                                <input type="text" id="nome" class="form-control" name="nome" required>
                                         </div>
                                   </div>
 
                                   <div class="mb-3">
                                       <div class="controls">
-                                      <label for="sobrenome" class="form-label">Sobrenome:</label>
-                                      <input type="text" id="sobrenome" class="form-control" name="sobrenome" required>
-                                  </div>
+                                          <label for="sobrenome" class="form-label">Sobrenome:</label>
+                                          <input type="text" id="sobrenome" class="form-control" name="sobrenome" required>
+                                      </div>
+                                  </div>    
 
                                   <div class="mb-3">
-                                      <label for="email" class="form-label">E-mail:</label>
-                                      <input type="email" class="form-control" id="email" name="email" required>
+                                      <div class="controls">
+                                          <label for="email" class="form-label">E-mail:</label>
+                                          <input type="email" class="form-control" id="email" name="email" required>
+                                      </div>   
                                   </div>
 
                                   <div class="mb-3">
                                       <div class="controls">
-                                      <label for="whatsapp" class="form-label">Whatsapp:</label>
-                                      <input type="text" id="whatsapp" class="form-control" name="whatsapp" required>
+                                            <label for="whatsapp" class="form-label">Whatsapp:</label>
+                                            <input type="text" id="whatsapp" class="form-control" name="whatsapp" required>
+                                      </div>                                 
                                   </div>
 
                                   <div class="mb-3">
-                                      <label for="mensagem" class="form-label">Mensagem:</label>
-                                      <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+                                      <div class="controls">
+                                            <label for="mensagem" class="form-label">Mensagem:</label>
+                                            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+                                      </div>
                                   </div>
                             <button type="submit" class="btn btn-primary">Enviar</button> 
                             </form>  
