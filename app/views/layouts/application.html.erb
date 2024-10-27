@@ -43,16 +43,65 @@
   </div>
 </nav>
 
+<!-- inicio banner -->
+<main class="w-100 min-vh-100 background-banner d-flex align-items-center">
+        <div class="container">
+           <div class="card rounded-1 border-0 p-1 pt-4 pb-4 pe-lg-4 pb-md-0 pb-lg-0 shadow">
+              <div class="card-body">
+                <form class="pb-lg-2" onsubmit="return false;">
+                      <div class="row">
+                            <div class="col-12 col-md-12 col-lg-3 mb-3">
+                                <label for="localizacao" class="form-label fw-bold"> Localização</label>
+                                <input type="text" class="form-control rounded-0" name="localizacao" id="localizacao" placeholder="Digite a localização"> 
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-2 mb-3"> 
+                              <label for="entrada" class="form-label fw-bold">Entrada</label>
+                              <input type="date" class="form-control rounded-0" name="entrada" id="entrada"> 
+                            </div>
 
-<!-- Main Content -->
+                            <div class="col-12 col-md-12 col-lg-2 mb-3"> 
+                              <label for="saida" class="form-label fw-bold">Saida</label>
+                              <input type="date" class="form-control rounded-0" name="saida" id="saida"> 
+                            </div>
+
+                            <div class="col-12 col-md-12 col-lg-3 mb-3"> 
+                              <label for="periodo" class="form-label fw-bold">Período</label>
+                                <select class="form-select rounded-0" name="periodo" id="periodo" aria-label="selecione o periodo"> 
+                                  <option class="" value="" selected>Selecione o Período</option>
+                                  <option class="" value="madrugada"> Madrugada</option>
+                                  <option class="" value="manha">Manhã</option>
+                                  <option class="" value="tarde">Tarde</option>
+                                  <option class="" value="noite">Noite</option>
+                                </select>  
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-2 mb-3 pt-3 d-lg-flex align-items-end">
+                                <a href="#" class="btn btn-roxo btn-lg w-100 rounded-0 border-0 p-lg-1">  Pesquisar</a>
+                            </div>
+                      </div>
+                </form>
+
+              </div>  
+           </div> 
+        </div>  
+      </main>
+<!--End banner-->
+
+
+
+
+
+
+
+
+<!-- Main Content 
 <main class="w-100 background-banner pb-5 pt-lg-4 pb-lg-5">
-  <!-- Jumbotron topo -->
+  <!-- Jumbotron topo 
   <section class="topo">
      <div class="webview">   
         <div class="container pt-5 pb-2 pt-lg-5 pb-lg-0">
               <h1 class="display-4  mb-4 text-center">Bem Vindo amigo Cliente!</h1>
               <p class="lead mb-4 text-center">Venha viver o conforto e a hospitalidade que você merece!</p>
-                <!-- Linha 2-->
+                <!-- Linha 2
                   <div class="row">
                       <div class="col-12 d-flex justify-content-center">
                         <a  href="#" class="btn btn-topo-outline ps-4 pe-4">
@@ -63,7 +112,7 @@
         </div>
     </div>    
   </section>
-</main>
+</main> -->
 
 
 <!--Area Serviço -->
@@ -89,7 +138,7 @@
                                     <h5 class="card-title mb-1">Café</h5>
                                     <p class="card-text">
                                       Comece o seu dia com um delicioso café da manhã cortesia, com opções frescas e variadas para todos os gostos.</p>
-                                    <a href="#" class="btn btn-orange rounded-0 w-100"> Verificar Disponibilidade</a>
+                                    <a href="#" class="btn btn-roxo rounded-0 w-100"> Verificar Disponibilidade</a>
                               </div>
                         </div>
               </div>             
@@ -110,7 +159,7 @@
                   <h5 class="card-title mb-1">Toalhas & lençoes</h5>
                   <p class="card-text">
                     Desfrute de conforto e limpeza com nosso serviço, garantindo sempre um ambiente acolhedor e higienizado para sua estadia.</p>
-                  <a href="#" class="btn btn-orange rounded-0 w-100"> Verificar Disponibilidade</a>
+                  <a href="#" class="btn btn-roxo rounded-0 w-100"> Verificar Disponibilidade</a>
                 </div>
               </div>
             </div>
@@ -129,7 +178,7 @@
                   <h5 class="card-title mb-1">Conexão segura e com qualidade!</h5>
                   <p class="card-text">
                     Possuimos a melhor conexao da cidade para você amigo cliente navigar com seguraça e alta velicidade.</p>
-                  <a href="#" class="btn btn-orange rounded-0 w-100"> Verificar Disponibilidade</a>
+                  <a href="#" class="btn btn-roxo rounded-0 w-100"> Verificar Disponibilidade</a>
                 </div>
               </div>
             </div>
@@ -208,6 +257,68 @@
       </div>
 </main>
 
+<footer class="w-100 bg-light ">
+      <div class="container pt-5 pt-lg-5 pb-lg-3">
+          <div class="row ">
+                  <div class="col-12 col-md-3 col-lg-4 mb-3 mb-0 mb-lg-0">
+                          <h4 class="fs-4 fw-bold text-uppercase mb-2 mb-md-4 mb-lg-4">Hotel Samurai</h4>
+                              <p class="text-muted">
+                                Somos uma empresa que nasceu no ano de 1998, cusja missão é entregar aos nossos clientes e parceiros os melhores lugares para ter um lazer e um descanso execelente e merecido. 
+                              </p>
+                              <p>
+                                <a href="#" title="facebook" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2">
+                                  <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="#" title="Instagram" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2">
+                                  <i class="fa-brands fa-square-instagram"></i>
+                                </a>
+                                <a href="#" title="twitter" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2">
+                                  <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="#" title="youtube" class="text-decoration-none text-muted me-1 me-md-1 me-lg-2">
+                                  <i class="fa-brands fa-youtube"></i>
+                                </a>
+                              </p>
+                    </div>
+                    
+                    <div class=" col-12 col-md-3 col-lg-4 pe-lg-0 ps-lg-5 mb-3 mb-md-0 mb-lg-0">
+                            <h4 class="fs-4 fw-bold mb-2 mb-md-4 mb-lg-4">Minha Conta</h4>
+                            <p class="mb-0">
+                              <a href="#" class="text-decoration-none text-muted">Minhas Viagens</a>
+                            </p>
+                            <p class="mb-0">
+                              <a href="#" class="text-decoration-none text-muted">Meu Perfil</a>
+                            </p>
+                    </div>
+                    
+                    <!--3 coluna do row-->
+                      <div class=" col-12 col-md-3 col-lg-4 mb-3 mb-md-0 mb-lg-0">
+                          <h4 class="fs-4 fw-bold mb-2 mb-md-4 mb-lg-4">Informações adicionais</h4>
+                          <p class="mb-0">
+                            <a href="#" class="text-decoration-none text-muted">Termos e condições</a>
+                          </p>
+                          <p class="mb-0">
+                            <a href="#" class="text-decoration-none text-muted">política de privacidade</a>
+                          </p>
+                          <p class="mb-0">
+                            <a href="#" class="text-decoration-none text-muted">Central de ajuda</a>
+                          </p>
+                          <p class="mb-0">
+                            <a href="#" class="text-decoration-none text-muted">Condições de uso</a>
+                          </p>  
+                      </div>
+
+          </div>
+      </div>
+
+
+      <!-- direitos reservados semprefora do container p evitar espacamentos-->
+        <div class=" w-100 copyright d-flex justify-content-center align-items-center">
+                  <p class="mb-0 pt-1 pb-1">
+                    &copy; Todos os direitos reservados
+                  </p>
+        </div>
+</footer>
 
 
 
