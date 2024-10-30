@@ -52,31 +52,42 @@ background-color: $color-roxe-01;
 }
 
 /*formatação da Area serciços site*/
-    .servicos{
-          .webview {
-            .container{
+   /* Estilização da área de serviços */
+.servicos {
+  .webview {
+    .container {
 
-                h2{
-                @include font-title;
-                  color:$color-roxe-03;
-                  font-size: 30px;
-                }
+      h2 {
+        @include font-title;
+        color: $color-roxe-03;
+        font-size: 30px;
+      }
 
-                .title-card{
-                    .card-body{
+      /* Estilos gerais para todos os cards */
+      .col-12 {
+        
+        /* Configurações da classe .card-body que estão dentro de .col-12 */
+        .card-body {
+          h3 {
+            @include font-subtitle;
+            font-size: 1.5rem;
+            color: $color-roxe-02;
+          }
 
-                      h3{
-                        @include font-subtitle;
-                        font-size: 1rem;
-                        color: $color-roxe-02;
-                      }
+          h5 {
+            @include font-subtitle;
+            color: $color-roxe-02;
+          }
 
-                    }
-                }
-
-            }
+          p {
+            @include font-subtitle;
+          }
         }
+      }
     }
+  }
+}
+
       
 
   /*area COntato */
