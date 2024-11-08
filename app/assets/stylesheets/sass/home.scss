@@ -142,6 +142,9 @@ background-color: $color-roxe-01;
                               border: 1px solid $color-roxe-03;
                               border-radius: 2px;
                               color: $color-roxe-01; /* Ajuste de cor do texto */
+                              &::placeholder { // Adicione esta parte para estilizar o placeholder
+                                color: $color-placeholder;
+                              }
                             }
                             &:focus {
                               border-color: $color-roxe-02; /* Cor na borda ao focar */
@@ -153,6 +156,55 @@ background-color: $color-roxe-01;
 
   }  
 }
+
+/*   botao enivar  */ 
+#contato {
+  .container {
+    .formulario {
+      form {
+        .controls {
+          // Estilos para os campos de input e textarea (já configurados anteriormente)
+          
+          // Estilizando o botão
+          button {
+            background-color: $color-roxe-02; // Cor de fundo do botão
+            color: $color-white; // Cor do texto do botão
+            font-size: 1rem; // Tamanho da fonte
+            padding: 10px 20px; // Espaçamento interno
+            border: none; // Remover borda
+            border-radius: 4px; // Borda arredondada
+            cursor: pointer; // Mostrar o cursor como pointer para indicar que é clicável
+            transition: background-color 0.3s ease; // Transição suave para a cor de fundo
+
+            // Efeito ao passar o mouse sobre o botão
+            &:hover {
+              background-color: $color-roxe-01; // Cor de fundo ao passar o mouse
+            }
+
+            // Efeito ao pressionar o botão
+            &:active {
+              background-color: darken($color-roxe-02, 10%); // Escurece um pouco a cor de fundo
+            }
+
+            // Estilos para o botão em telas pequenas
+            @media (max-width: 768px) {
+              width: 100%; // Tornar o botão responsivo (preencher a largura do formulário)
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* botao enivar do formulario */
+
+@media (max-width: 320px) {
+  .btn {
+    width: 100%; /* O botão ocupará 100% da largura disponível */
+  }
+}
+
 
   
   
