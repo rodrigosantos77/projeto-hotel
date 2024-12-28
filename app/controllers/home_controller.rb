@@ -1,9 +1,5 @@
 class HomeController < ApplicationController
   def index
-  end
-
-
-  #criancao do metodo sobre
-  def sobre
+    # Lógica para a página inicial (se necessário)
   end
 end

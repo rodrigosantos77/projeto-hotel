@@ -1,20 +1,19 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
   # Página inicial
   root 'home#index'
 
-  # Página de saúde para verificação
-  get 'up', to: 'rails/health#show', as: :rails_health_check
+  # Rotas para usuários (sem redundância)
+  resources :users, only: [:new, :create, :show, :edit, :update]
 
-  # Rotas para a página "sobre"
+  # Rotas para as sessões [login/logout]
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy', as: 'logout'
+
+  # Outras rotas
   get '/sobre', to: 'sobre#index'
-
-  # Outras rotas da página inicial
-  get 'home/index'
-
-  # Comentários adicionais
-  # Adicione novas rotas abaixo conforme necessário
-
-  # Exemplo de rota de recursos (descomente se necessário)
-  # resources :articles
-
+  get 'up', to: 'rails/health#show', as: :rails_health_check
 end

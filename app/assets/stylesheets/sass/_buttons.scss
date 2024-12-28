@@ -47,5 +47,27 @@
 }
 /* fim do Topo */
 
+/*inicio do estizacao do botao de login do Topo */
+/* Botão Login */
+.btn-login {
+  color: $color-white;
+  background-color: $color-roxe-01; // Adicione a cor desejada
+  outline: none;
+  border-radius: 5px; // Ajuste o arredondamento se necessário
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra opcional
+  font-size: 1rem;
+  font-family: 'Ruda', sans-serif;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+}
+.btn-login:hover {
+  background-color: darken($color-main, 10%); // Escurece a cor no hover
+  color: $color-roxe-01; // Ajuste a cor do texto no hover, se necessário
+}
+/* Adicione no _buttons.scss */
+.btn-login {
+  margin-left: auto; // Empurra o botão para a direita
+}
+
 
 
