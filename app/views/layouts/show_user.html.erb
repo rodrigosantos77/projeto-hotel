@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalhes do Usuário</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+</head>
+<body>
+  <div class="container">
+    <%= yield %> <!-- Aqui irá renderizar o conteúdo da página show -->
+  </div>
+</body>
+</html>

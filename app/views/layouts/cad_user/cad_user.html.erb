@@ -1,4 +1,9 @@
-<h1>Criar Novo Usuário</h1>
+<h1>Novo Usuário</h1>
+
+<!- verficacao de carregamento da pagina corretamente  -->
+<%= debug params %> 
+
+
 
 <%= form_with model: @user, local: true do |form| %>
   <% if @user.errors.any? %>
@@ -13,22 +18,22 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
+  <%= form.label :username, "Usuário" %>
+  <%= form.text_field :username %>  
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label :email, "E-mail" %>
     <%= form.email_field :email %>
   </div>
 
   <div class="field">
-    <%= form.label :password %>
+    <%= form.label :password, "Senha" %>
     <%= form.password_field :password %>
   </div>
 
   <div class="field">
-    <%= form.label :password_confirmation %>
+    <%= form.label :password_confirmation, "Confirmar Senha" %>
     <%= form.password_field :password_confirmation %>
   </div>
 
