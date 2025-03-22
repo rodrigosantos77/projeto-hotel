@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
@@ -16,4 +17,7 @@ Rails.application.routes.draw do
   # Outras rotas
   get '/sobre', to: 'sobre#index'
   get 'up', to: 'rails/health#show', as: :rails_health_check
+  get '/dashboard', to: 'dashboard#index', as: 'dashboard'
+
+
 end
