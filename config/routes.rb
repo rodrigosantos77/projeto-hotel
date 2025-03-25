@@ -14,6 +14,12 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy', as: 'logout'
 
+
+  #rota para criacao da pagina de cadastro do usuario 
+  get '/signup', to: 'users#new', as: 'signup' 
+
+
+
   # Outras rotas
   get '/sobre', to: 'sobre#index'
   get 'up', to: 'rails/health#show', as: :rails_health_check
