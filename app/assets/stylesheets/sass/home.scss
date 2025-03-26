@@ -3,17 +3,38 @@
 
 
 /*formatação inicial da pagina web*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+/* formatação inicial da página web */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body{
+
+html, body {
   @include font-paragraf;
   font-size: 18px;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
+
+.wrapper {
+  flex: 1; // Faz com que o conteúdo principal ocupe o máximo possível da tela
+}
+
+footer {
+  width: 100%;
+  margin-top: auto; // Empurra o footer para o final quando não há conteúdo suficiente
+}
+
+/* restante do seu código continua aqui... */
+
+
+
 /*formatação do navbar*/
     .navbar {
 background-color: $color-roxe-01;

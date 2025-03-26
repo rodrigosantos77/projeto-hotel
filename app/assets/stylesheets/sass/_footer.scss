@@ -1,0 +1,30 @@
+// sass/_footer.scss
+
+
+footer {
+    background-color: $color-footer-bg;
+    padding: 20px 0;
+    text-align: center;
+    color: #333;
+    width: 100%;
+    
+    h4, p, a {
+      color: #333;
+    }
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .copyright {
+      background-color: $color-danger;  // Cor do fundo da copyright
+      padding: 10px;
+      color: white;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      position: relative;  // Garante que não será afetado por margens externas
+    }
+  }
+  
