@@ -5,26 +5,34 @@ footer {
     background-color: $color-footer-bg;
     padding: 20px 0;
     text-align: center;
-    color: #333;
+    color: $color-text;
     width: 100%;
     
     h4, p, a {
-      color: #333;
+      color: $color-text !important;
     }
+   
+    a {
+      text-decoration: none;
+      
+      &:hover {
+        color: darken($color-text, 15%); // Escurece um pouco ao passar o mouse
+      }
+    }
+
+    .text-muted {
+      color: $color-text !important; // Sobrescreve a classe Bootstrap
+    }
+}
+
   
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
   
-    .copyright {
-      background-color: $color-danger;  // Cor do fundo da copyright
-      padding: 10px;
-      color: white;
-      text-align: center;
-      width: 100%;
-      margin: 0;
-      position: relative;  // Garante que não será afetado por margens externas
-    }
+  .copyright {
+    background-color: $color-roxe-02;  // Cor do fundo da copyright
+    padding: 10px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    position: relative;  // Garante que não será afetado por margens externas
   }
-  
