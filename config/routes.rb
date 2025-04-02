@@ -1,29 +1,28 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
   # Página inicial
   root 'home#index'
 
-  # Rotas para usuários (sem redundância)
-  resources :users, only: [:new, :create, :show, :edit, :update]
+  # Rotas do Dashboard
+  get 'dashboard/index'
+  get '/dashboard', to: 'dashboard#index', as: 'dashboard'
 
-  # Rotas para as sessões [login/logout]
+  # Rotas de Sessão (Login/Logout)
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy', as: 'logout'
 
+  # Rotas para Usuários
+  resources :users, only: [:new, :create, :show, :edit, :update]
+  get '/signup', to: 'users#new', as: 'signup'
 
-  #rota para criacao da pagina de cadastro do usuario 
-  get '/signup', to: 'users#new', as: 'signup' 
+  # Rotas para Reservas
+  resources :reservas
 
-
-
-  # Outras rotas
+  # Outras Rotas
   get '/sobre', to: 'sobre#index'
   get 'up', to: 'rails/health#show', as: :rails_health_check
-  get '/dashboard', to: 'dashboard#index', as: 'dashboard'
-
-
 end
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Reservas</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= javascript_include_tag "application", defer: true %>
+</head>
+<body>
+  <nav>
+    <!-- Navbar exclusiva para reservas -->
+  </nav>
+
+  <div class="container">
+    <%= yield %> <!-- Renderiza a página específica da reserva -->
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Reservas</p>
+  </footer>
+</body>
+</html>

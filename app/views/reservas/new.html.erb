@@ -1,0 +1,28 @@
+<h1>Nova Reserva</h1>
+
+<% if @reserva.errors.any? %>
+  <div class="alert alert-danger">
+    <h4><%= pluralize(@reserva.errors.count, "erro") %> proibiu esta reserva de ser salva:</h4>
+    <ul>
+      <% @reserva.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with model: @reserva, local: true do |f| %>
+  <div class="mb-3">
+    <%= f.label :data, "Data da Reserva" %>
+    <%= f.date_field :data, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :status, "Status" %>
+    <%= f.select :status, ["Pendente", "Confirmada", "Cancelada"], class: "form-control" %>
+  </div>
+
+  <%= f.submit "Criar Reserva", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Voltar", reservas_path, class: "btn btn-secondary mt-3" %>
