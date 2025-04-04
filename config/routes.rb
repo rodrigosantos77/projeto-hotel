@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'quartos/index'
+  get 'quartos/show'
   # Página inicial
   root 'home#index'
 
@@ -20,6 +22,14 @@ Rails.application.routes.draw do
 
   # Rotas para Reservas
   resources :reservas
+
+# Rotas para Reservas de quartos
+get 'quartos', to: 'quartos#index'
+resources :quartos, only: [:index, :show]
+
+
+
+
 
   # Outras Rotas
   get '/sobre', to: 'sobre#index'

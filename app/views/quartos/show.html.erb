@@ -1,0 +1,9 @@
+<h1><%= @quarto.nome %></h1>
+
+<img src="<%= image_path(@quarto.imagem) %>" alt="Imagem do quarto">
+
+<p><%= @quarto.descricao %></p>
+<p>Preço: <%= number_to_currency(@quarto.preco) %> por noite</p>
+
+<%= link_to "Reservar", new_reserva_path(quarto_id: @quarto.id), class: "btn btn-primary" %>
+<%= link_to "Voltar", quartos_path, class: "btn btn-secondary" %>

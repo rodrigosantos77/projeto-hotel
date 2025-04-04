@@ -1,0 +1,25 @@
+
+
+
+<h1 class="text-center my-4">Quartos Disponíveis</h1>
+
+<div class="container">
+  <div class="row">
+    <% @quartos.each do |quarto| %>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="<%= image_path(quarto.imagem) %>" class="card-img-top" alt="Imagem do quarto">
+          <div class="card-body">
+            <h5 class="card-title"><%= quarto.nome %></h5>
+            <p class="card-text text-muted"><%= quarto.descricao.truncate(80) %></p>
+            <p class="fw-bold">Preço: <%= number_to_currency(quarto.preco) %> por noite</p>
+            <div class="d-flex justify-content-between">
+              <%= link_to "Detalhes", quarto_path(quarto), class: "btn btn-outline-primary" %>
+              <%= link_to "Reservar", new_reserva_path(quarto_id: quarto.id), class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
