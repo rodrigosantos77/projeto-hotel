@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2025_04_03_151453) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "quartos", force: :cascade do |t|
     t.string "nome"
     t.text "descricao"
@@ -21,7 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_04_03_151453) do
   end
 
   create_table "reservas", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "data"
     t.string "status"
     t.datetime "created_at", null: false

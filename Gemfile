@@ -6,7 +6,7 @@ gem 'font-awesome-sass', '~> 6.0.0' # Atualize para a versão mais recente dispo
 
 gem "rails", "~> 7.1.3", ">= 7.1.3.4"
 gem "sprockets-rails", "~> 3.5"
-gem "sqlite3", "~> 1.4"
+gem "pg", "~> 1.5"
 gem "puma", ">= 5.0"
 gem 'turbolinks', '~> 5'
 gem 'rails-ujs'
