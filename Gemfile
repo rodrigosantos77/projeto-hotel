@@ -23,6 +23,8 @@ gem 'webpacker', '~> 5.0'
 gem "net-protocol", "~> 0.2.1"
 gem "net-pop", "~> 0.1.2"
 
+gem "net-pop", "~> 0.1.2"
+gem "net-protocol", "~> 0.2.1"
 
 
 
