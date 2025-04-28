@@ -20,7 +20,10 @@
         <td>
           <%= link_to 'Ver', reserva_path(reserva), class: "btn btn-info btn-sm" %>
           <%= link_to 'Editar', edit_reserva_path(reserva), class: "btn btn-warning btn-sm" %>
+
+          <% if current_user.atendente? %>
           <%= link_to 'Excluir', reserva_path(reserva), method: :delete, data: { confirm: "Tem certeza?" }, class: "btn btn-danger btn-sm" %>
+        <% end %>
         </td>
       </tr>
     <% end %>

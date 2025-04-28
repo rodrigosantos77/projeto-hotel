@@ -310,8 +310,9 @@
     </script>
 
  <!-- JavaScript --> 
-  <!-- <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %> -->
- <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
+ 
+ <%= javascript_include_tag "application", type: "module", "data-turbo-track": "reload", defer: true %>
+
 
 </body>
 </html>

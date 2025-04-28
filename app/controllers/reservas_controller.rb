@@ -48,9 +48,12 @@ class ReservasController < ApplicationController
   end
 
    # Exclui uma reserva
+
 def destroy
-  # Verifica se o usuário logado é um atendente ou o dono da reserva
-  if current_user.atendente? || @reserva.user == current_user
+  @reserva = Reserva.find_by(id: params[:id])
+  if @reserva.nil?
+    redirect_to reservas_url, alert: 'Reserva não encontrada.'
+  elsif current_user.atendente? || @reserva.user == current_user
     if @reserva.destroy
       redirect_to reservas_url, notice: 'Reserva excluída com sucesso!'
     else
@@ -60,8 +63,6 @@ def destroy
     redirect_to reservas_url, alert: 'Você não tem permissão para excluir esta reserva.'
   end
 end
-
-
 
   # Busca a reserva pelo ID
   def set_reserva
