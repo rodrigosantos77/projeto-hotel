@@ -1,42 +1,90 @@
 /* pagina_web/app/assets/stylesheets/sass/login.scss */
 
-/* Estilos para a página de login */
-.login-page {
-    background-color: #6a0dad; /* Cor roxa */
-    height: 100vh;
+/* Estilo geral da página de login */
+  .login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a0dad, #8e2de2); /* Gradiente roxo */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .login-container {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    color: #6a0dad;
-    text-align: center;
-  }
-  
-  input {
-    width: 100%;
-    padding: 0.8rem;
-    margin: 0.5rem 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #6a0dad;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  
+    padding: 1rem;
+}
+
+/* Container que centraliza o card */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Card de login */
+.login-card {
+  background: $color-main;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+.login-card h1 {
+  color:$color-roxe-03;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Grupo de inputs */
+.input-group {
+  margin-bottom: 1rem;
+}
+
+/* Campos de entrada */
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Botão de login */
+.login-button {
+  width: 100%;
+  background-color: $color-roxe-03;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: $color-roxe-03;
+}
+
+/* Link: esqueceu a senha */
+.forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: $color-roxe-02;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Link de cadastro */
+.btn.btn-primary {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #6a0dad;
+  border: none;
+}
+
+.btn.btn-primary:hover {
+  background-color: #5900b3;
+}
