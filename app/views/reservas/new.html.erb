@@ -1,3 +1,4 @@
+
 <h1>Nova Reserva</h1>
 
 <% if @reserva.errors.any? %>
@@ -13,8 +14,13 @@
 
 <%= form_with model: @reserva, local: true do |f| %>
   <div class="mb-3">
-    <%= f.label :data, "Data da Reserva" %>
-    <%= f.date_field :data, class: "form-control" %>
+    <%= f.label :check_in, "Data de Entrada" %>
+    <%= f.datetime_local_field :check_in, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :check_out, "Data de Saída" %>
+    <%= f.datetime_local_field :check_out, class: "form-control" %>
   </div>
 
   <div class="mb-3">
