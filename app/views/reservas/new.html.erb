@@ -12,23 +12,38 @@
   </div>
 <% end %>
 
+<!--CAMPOS DE DATA DE ENTRADA -->
 <%= form_with model: @reserva, local: true do |f| %>
   <div class="mb-3">
     <%= f.label :check_in, "Data de Entrada" %>
     <%= f.datetime_local_field :check_in, class: "form-control" %>
   </div>
 
+
+<!--CAMPOS DE DATA DE SAIDA-->
   <div class="mb-3">
     <%= f.label :check_out, "Data de Saída" %>
     <%= f.datetime_local_field :check_out, class: "form-control" %>
   </div>
 
+  <!--CAMPOS DE SELECIONAR O QUARTO-->
+  <div class="mb-3">
+  <%= f.label :quarto_id, "Quarto" %>
+  <%= f.collection_select :quarto_id, Quarto.all, :id, :numero, prompt: "Selecione um quarto", class: "form-control" %>
+</div>
+
+
+<!--CAMPOS DE STATUS -->
   <div class="mb-3">
     <%= f.label :status, "Status" %>
     <%= f.select :status, ["Pendente", "Confirmada", "Cancelada"], class: "form-control" %>
   </div>
 
+
+<!--CAMPO BOTAO DE RESERVA-->
   <%= f.submit "Criar Reserva", class: "btn btn-primary" %>
 <% end %>
 
+
+<!--CAMPO BOTAO DE RETORNAR A TELA-->
 <%= link_to "Voltar", reservas_path, class: "btn btn-secondary mt-3" %>

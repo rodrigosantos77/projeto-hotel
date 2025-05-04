@@ -6,9 +6,13 @@ class ReservasController < ApplicationController
 
   # Lista todas as reservas
   def index
-    @reservas = current_user.reservas.order(data: :asc) if current_user
+    if current_user.atendente?
+      @reservas = Reserva.all.order(data: :asc)
+    else
+      @reservas = current_user.reservas.order(data: :asc)
+    end
   end
-
+  
 
   # Exibe uma reserva específica
   def show
@@ -66,10 +70,13 @@ end
 
   # Busca a reserva pelo ID
   def set_reserva
-    @reserva = current_user.reservas.find(params[:id])
+    if current_user.atendente?
+      @reserva = Reserva.find(params[:id])
+    else
+      @reserva = current_user.reservas.find(params[:id])
+    end
   end
-
-
+    
   # Define os parâmetros permitidos
   def reserva_params
     params.require(:reserva).permit(:check_in, :check_out, :status, :quarto_id)

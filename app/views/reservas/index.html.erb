@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Data</th>
+      <th>Check-in / Check-out</th>
+      <th>Quarto</th>
       <th>Status</th>
       <th>Ações</th>
     </tr>
@@ -15,8 +16,13 @@
     <% @reservas.each do |reserva| %>
       <tr>
         <td><%= reserva.id %></td>
-        <td><%= reserva.data %></td>
+        <td>
+        <strong>Entrada:</strong> <%= reserva.check_in.strftime("%d/%m/%Y %H:%M") if reserva.check_in %><br>
+        <strong>Saída:</strong> <%= reserva.check_out.strftime("%d/%m/%Y %H:%M") if reserva.check_out %>
+      </td>
+      <td>Quarto: <%= reserva.quarto.numero if reserva.quarto %></td>
         <td><%= reserva.status %></td>
+        
         <td>
           <%= link_to 'Ver', reserva_path(reserva), class: "btn btn-info btn-sm" %>
           <%= link_to 'Editar', edit_reserva_path(reserva), class: "btn btn-warning btn-sm" %>

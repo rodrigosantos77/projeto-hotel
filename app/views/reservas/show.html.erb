@@ -1,6 +1,15 @@
 
-
 <h1>Detalhes da Reserva</h1>
-<p>Data: <%= @reserva.data %></p>
-<p>Status: <%= @reserva.status %></p>
-<%= link_to 'Voltar', reservas_path, class: 'btn btn-primary' %>
+
+<p><strong>ID:</strong> <%= @reserva.id %></p>
+<p><strong>Status:</strong> <%= @reserva.status %></p>
+<p><strong>Check-in:</strong> <%= @reserva.check_in.strftime("%d/%m/%Y %H:%M") if @reserva.check_in.present? %></p>
+<p><strong>Check-out:</strong> <%= @reserva.check_out.strftime("%d/%m/%Y %H:%M") if @reserva.check_out.present? %></p>
+
+<% if @reserva.quarto.present? %>
+  <p><strong>Quarto:</strong> <%= @reserva.quarto.numero %> - <%= @reserva.quarto.tipo %></p>
+<% else %>
+  <p><strong>Quarto:</strong> Não definido</p>
+<% end %>
+
+<%= link_to 'Voltar', reservas_path, class: 'btn btn-primary mt-3' %>
