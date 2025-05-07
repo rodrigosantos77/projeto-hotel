@@ -13,9 +13,10 @@
   
 <header>
   <h1>Bem-vindo ao Dashboard</h1>
-  <%= link_to "Logout", logout_path, method: :delete, data: { turbo: false } %>
+  <% if @user.role != 'cliente' %>
+    <%= link_to "Logout", logout_path, method: :delete, data: { turbo: false } %>
+  <% end %>
 </header>
-
   
   <main>
     <%= yield %>

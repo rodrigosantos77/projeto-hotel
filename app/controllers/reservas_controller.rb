@@ -30,7 +30,7 @@ class ReservasController < ApplicationController
     @reserva = Reserva.new(reserva_params)
     @reserva.user = current_user  # A reserva pertence ao usuário logado
     if @reserva.save
-      redirect_to @reserva, notice: 'Reserva criada com sucesso!'
+      redirect_to dashboard_path, notice: 'Reserva criada com sucesso!'
     else
       render :new, status: :unprocessable_entity
     end
