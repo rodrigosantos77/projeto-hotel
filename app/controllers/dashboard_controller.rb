@@ -6,9 +6,10 @@ def index
   @user = User.find(session[:user_id]) if session[:user_id]
 
   if @user.atendente?
+    @reservas = Reserva.includes(:user, :quarto).order(created_at: :desc) #Carrega reservas para o atendente 
     render 'index_atendente'
   else
-    @reservas = @user.reservas.includes(:quarto)  # Carrega reservas só se for cliente
+    @reservas = @user.reservas.includes(:quarto)  #Carrega reservas só se for cliente
     render 'index_cliente'
   end
 end

@@ -9,12 +9,14 @@
 <% if @reservas.any? %>
   <table class="table table-striped">
     <thead>
-      <tr>
-        <th>Quarto</th>
-        <th>Data de Entrada</th>
-        <th>Data de Saída</th>
-        <th>Status</th>
-      </tr>
+    tr>
+    <th>Cliente</th>
+    <th>Quarto</th>
+    <th>Entrada</th>
+    <th>Saída</th>
+    <th>Status</th>
+    <th>Ações</th>
+  </tr>
     </thead>
     <tbody>
       <% @reservas.each do |reserva| %>
