@@ -16,6 +16,10 @@
   <% if @user.role != 'cliente' %>
     <%= link_to "Logout", logout_path, method: :delete, data: { turbo: false } %>
   <% end %>
+
+  <% if @user.role != 'atendente' %>
+    <%= link_to "Logout", logout_path, method: :delete, data: { turbo: false } %>
+  <% end %>
 </header>
   
   <main>
