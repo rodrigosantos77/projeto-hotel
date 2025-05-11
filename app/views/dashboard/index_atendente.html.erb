@@ -1,10 +1,25 @@
-<!-- index_atendente.html.erb -->
-<h1>Bem-vindo, atendente!</h1>
-<p>Aqui está o painel de controle com todas as reservas, clientes, e quartos.</p>
 
-<h1>Dashboard do Atendente</h1>
 
-    <table class="table table-striped table-hover mt-4">
+
+
+
+<div class="d-flex justify-content-end gap-2 mb-3">
+  <div class="d-inline-flex">
+    <%= link_to new_reserva_path, class: 'btn btn-success d-flex align-items-center px-3 py-2' do %>
+      <i class="fa fa-plus-circle me-2"></i>
+      <span>Nova Reserva</span>
+    <% end %>
+  </div>
+  <div class="d-inline-flex">
+    <%= link_to new_user_path, class: 'btn btn-primary d-flex align-items-center px-3 py-2' do %>
+      <i class="fa fa-user-plus me-2"></i>
+      <span>Novo Cliente</span>
+    <% end %>
+  </div>
+</div>
+
+
+<table class="table table-striped table-hover mt-4">
   <thead class="table-dark">
     <tr>
       <th>Quarto</th>
@@ -12,6 +27,7 @@
       <th>Check-out</th>
       <th>Status</th>
       <th>Cliente</th>
+      <th>Ações</th>
     </tr>
   </thead>
   <tbody>
@@ -22,9 +38,11 @@
         <td><%= reserva.check_out.strftime('%d/%m/%Y') %></td>
         <td><%= reserva.status || 'Confirmada' %></td>
         <td><%= reserva.user.nome %></td>
+        <td>
+          <%= link_to 'Editar', edit_reserva_path(reserva), class: 'btn btn-warning btn-sm' %>
+          <%= link_to 'Excluir', reserva, method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: 'Tem certeza que deseja excluir esta reserva?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-    

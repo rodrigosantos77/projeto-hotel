@@ -12,15 +12,11 @@
 <body>
   
 <header>
-  <h1>Bem-vindo ao Dashboard</h1>
-  <% if @user.role != 'cliente' %>
-    <%= link_to "Logout", logout_path, method: :delete, data: { turbo: false } %>
-  <% end %>
-
-  <% if @user.role != 'atendente' %>
-    <%= link_to "Logout", logout_path, method: :delete, data: { turbo: false } %>
-  <% end %>
+  <h1>Bem-vindo ao Dashboard, <%= @user.username %>!</h1>
+  <!-- Remover ou comentar o código do link de logout -->
+  <%#= link_to "Logout", logout_path, method: :delete, data: { turbo: false } %>
 </header>
+
   
   <main>
     <%= yield %>

@@ -1,74 +1,102 @@
+/* -------------------------------------------
+   Botões de Nova Reserva e Novo Cliente
+   ------------------------------------------- */
 
-/* Botao Visualizar Todos estilzação*/
-.btn-orange-outline {
-  color: $color-orange;
-  background-color: transparent;
-  outline: 2px solid $color-orange;
-  box-shadow: none;
-  font-size: 1rem;
-  font-family: 'Ruda', sans-serif;
-  font-weight: 400;
-}
-.btn-orange-outline:hover {
-  color: $color-main;
-  background-color:$color-orange;
-  outline: none;
-  border-radius: 0px;
-}
-/*  BOTAO 2 DO TOPO */
-.btn-topo-outline {
-  color: $color-text;
-  background-color: transparent;
-  outline: 2px solid $color-roxe-02;
-  box-shadow: none;
-  font-size: 1rem;
-  font-family: 'Ruda', sans-serif;
-  font-weight: 400;
-}
-.btn-topo-outline:hover {
-  color: $color-main;
-  background-color:$color-roxe-02;
-  outline: none;
-  border-radius: 0px;
-}
-/* botao do card */
-.btn-roxo {
-  color: $color-white;
-  background-color:$color-roxe-03;
-  outline: none;
-  box-shadow: none;
-  font-size: 1rem;
-  font-family: 'Ruda', sans-serif;
-  font-weight: 400;
-}
-.btn-roxo:hover {
-  color: $color-white;
-  background-color:$color-roxe-03;
-}
-/* fim do Topo */
-
-/*inicio do estizacao do botao de login do Topo */
-/* Botão Login */
-.btn-login {
-  color: $color-white;
-  background-color: $color-roxe-01; // Adicione a cor desejada
-  outline: none;
-  border-radius: 5px; // Ajuste o arredondamento se necessário
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra opcional
+/* Botão Nova Reserva */
+.btn-success {
+  color: #fff;
+  background-color: #198754;
+  border-color: #198754;
+  min-width: 180px; /* Garantir que o botão tenha a largura mínima */
+  max-width: 220px; /* Limitar a largura máxima para não esticar demais */
+  padding: 0.5rem 1.25rem; /* Ajusta o padding */
   font-size: 1rem;
   font-family: 'Ruda', sans-serif;
   font-weight: 500;
-  padding: 0.5rem 1.5rem;
-}
-.btn-login:hover {
-  background-color: darken($color-main, 10%); // Escurece a cor no hover
-  color: $color-roxe-01; // Ajuste a cor do texto no hover, se necessário
-}
-/* Adicione no _buttons.scss */
-.btn-login {
-  margin-left: auto; // Empurra o botão para a direita
+  white-space: nowrap; /* Evita quebra de linha no texto */
 }
 
+.btn-success:hover {
+  background-color: #157347;
+  border-color: #146c43;
+}
 
+/* Botão Novo Cliente */
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  min-width: 180px; /* Garantir que o botão tenha a largura mínima */
+  max-width: 220px; /* Limitar a largura máxima */
+  padding: 0.5rem 1.25rem; /* Ajusta o padding */
+  font-size: 1rem;
+  font-family: 'Ruda', sans-serif;
+  font-weight: 500;
+  white-space: nowrap; /* Evita quebra de linha no texto */
+}
 
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
 
+/* -------------------------------------------
+   Botões de Editar e Excluir
+   ------------------------------------------- */
+
+/* Botão Editar */
+.btn-warning {
+  color: #fff;
+  background-color: #ffc107;
+  border-color: #ffc107;
+  min-width: 120px; /* Botões de editar e excluir serão mais compactos */
+  max-width: 180px;
+  padding: 0.5rem 1rem;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+/* Botão Excluir */
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  min-width: 120px; /* Botões de editar e excluir serão mais compactos */
+  max-width: 180px;
+  padding: 0.5rem 1rem;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* -------------------------------------------
+   Ajustes para Layout
+   ------------------------------------------- */
+
+/* Container que envolve os botões para garantir que fiquem alinhados */
+.button-container {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+  flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha, se necessário */
+}
+
+/* Ajusta o ícone e o texto dentro dos botões */
+.d-inline-flex {
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 6px; /* Ajusta o espaçamento entre o ícone e o texto */
+}
+
+.btn i {
+  margin-right: 8px; /* Ajusta o espaçamento do ícone */
+}
+
+.btn span {
+  white-space: nowrap; /* Impede o texto de quebrar para a próxima linha */
+}
