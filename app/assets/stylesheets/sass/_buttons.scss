@@ -85,6 +85,9 @@
   flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha, se necessário */
 }
 
+
+
+
 /* Ajusta o ícone e o texto dentro dos botões */
 .d-inline-flex {
   display: inline-flex !important;
@@ -99,4 +102,21 @@
 
 .btn span {
   white-space: nowrap; /* Impede o texto de quebrar para a próxima linha */
+}
+
+
+.btn-purple {
+  background-color: #6f42c1;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: darken(#6f42c1, 10%);
+    color: #fff;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.5);
+  }
 }

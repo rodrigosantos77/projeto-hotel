@@ -12,12 +12,11 @@
 <body>
   
 <header>
-  <h1>Bem-vindo ao Dashboard, <%= @user.username %>!</h1>
+  
   <!-- Remover ou comentar o código do link de logout -->
   <%#= link_to "Logout", logout_path, method: :delete, data: { turbo: false } %>
 </header>
 
-  
   <main>
     <%= yield %>
   </main>
