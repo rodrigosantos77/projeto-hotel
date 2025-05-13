@@ -17,7 +17,7 @@ gem "bootstrap", "~> 5.3.3"
 gem 'sassc-rails'
 gem 'importmap-rails'
 gem 'bcrypt', '~> 3.1.7'
-gem 'webpacker', '~> 5.0'
+#gem 'webpacker', '~> 5.0'
 
 
 

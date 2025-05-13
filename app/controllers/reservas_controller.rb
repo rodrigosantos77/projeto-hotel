@@ -51,22 +51,29 @@ class ReservasController < ApplicationController
     end
   end
 
-   # Exclui uma reserva
-
+# Exclui uma reserva
 def destroy
   @reserva = Reserva.find_by(id: params[:id])
-  if @reserva.nil?
-    redirect_to reservas_url, alert: 'Reserva não encontrada.'
-  elsif current_user.atendente? || @reserva.user == current_user
-    if @reserva.destroy
-      redirect_to reservas_url, notice: 'Reserva excluída com sucesso!'
+
+  respond_to do |format|
+    if @reserva.nil?
+      format.html { redirect_to reservas_url, alert: 'Reserva não encontrada.' }
+      format.js   { render js: "alert('Reserva não encontrada.');" }
+    elsif current_user.atendente? || @reserva.user == current_user
+      if @reserva.destroy
+        format.html { redirect_to reservas_url, notice: 'Reserva excluída com sucesso!' }
+        format.js   # ← Vai procurar o destroy.js.erb
+      else
+        format.html { redirect_to reservas_url, alert: 'Erro ao excluir a reserva.' }
+        format.js   { render js: "alert('Erro ao excluir a reserva.');" }
+      end
     else
-      redirect_to reservas_url, alert: 'Erro ao excluir a reserva.'
+      format.html { redirect_to reservas_url, alert: 'Você não tem permissão para excluir esta reserva.' }
+      format.js   { render js: "alert('Você não tem permissão para excluir esta reserva.');" }
     end
-  else
-    redirect_to reservas_url, alert: 'Você não tem permissão para excluir esta reserva.'
   end
 end
+
 
   # Busca a reserva pelo ID
   def set_reserva

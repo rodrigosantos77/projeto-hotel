@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Pagina_inicial</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
+
+  <!-- CSS principal -->
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
-  <%= javascript_importmap_tags %>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;700&display=swap" rel="stylesheet">
 
-
+  <!-- Importmap: necessário para funcionar com importmap-rails -->
+  <%= javascript_importmap_tags %>
 </head>
 
 <body>

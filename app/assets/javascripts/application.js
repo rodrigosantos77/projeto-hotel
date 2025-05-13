@@ -3,5 +3,3 @@
 //= require popper
 //= require activestorage
 //= require_tree .
-
-
