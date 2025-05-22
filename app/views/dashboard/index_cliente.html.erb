@@ -1,4 +1,4 @@
-
+<div class="container">
 <h1 class="text-center mb-4">Bem-vindo, <%= @user.username %>!</h1>
 
 <div class="d-flex justify-content-between mb-4">
@@ -9,7 +9,7 @@
 <% if @reservas.any? %>
   <table class="table table-striped">
     <thead>
-    tr>
+    <tr>
     <th>Cliente</th>
     <th>Quarto</th>
     <th>Entrada</th>
@@ -32,3 +32,4 @@
 <% else %>
   <p class="text-center">Você ainda não fez nenhuma reserva.</p>
 <% end %>
+</div>

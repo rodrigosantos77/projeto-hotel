@@ -1,5 +1,5 @@
+// Remove a linha da tabela referente à reserva excluída
+$("#reserva_<%= @reserva.id %>").fadeOut(400, function() { $(this).remove(); });
 
-// Remove a linha da tabela que contém a reserva excluída
-$("#reserva_<%= @reserva.id %>").remove();
-
-
+// Opcional: mostrar uma mensagem de sucesso (pode ser via alert, toast, etc)
+alert('Reserva excluída com sucesso!');

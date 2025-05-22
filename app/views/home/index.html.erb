@@ -1,24 +1,17 @@
-
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Bem vindo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<head>
-<meta charset="UTF-08">
- 
-</head>
-    
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
 
-<body>
-  <div class ="jumbotron topo">
-<div  class ="container">
-
-
-
-</div>    
-</div>
-
-</body>    
-
-
-
-</html>    
+  <body>
+  <h1>  Pagina inicial</h1>
+    <%= yield %>
+  </body>
+</html>

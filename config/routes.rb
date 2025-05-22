@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'testes/index'
   get 'quartos/index'
   get 'quartos/show'
   # Página inicial
   root 'home#index'
+  
 
   # Rotas do Dashboard
   get 'dashboard/index'

@@ -8,7 +8,7 @@ gem "sprockets-rails", "~> 3.5"
 gem "pg", "~> 1.5"
 gem "puma", ">= 5.0"
 #gem 'turbolinks', '~> 5'
-gem 'rails-ujs'
+#gem 'rails-ujs'
 gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[mswin mswin64 mingw x64_mingw jruby]
