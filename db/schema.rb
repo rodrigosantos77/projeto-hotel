@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_05_08_211907) do
+ActiveRecord::Schema[7.1].define(version: 2025_05_27_152743) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,6 +46,11 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_08_211907) do
     t.datetime "updated_at", null: false
     t.string "role", default: "cliente"
     t.string "nome"
+    t.string "cpf"
+    t.string "rg"
+    t.string "address"
+    t.string "phone"
+    t.string "gender"
   end
 
   add_foreign_key "reservas", "users"

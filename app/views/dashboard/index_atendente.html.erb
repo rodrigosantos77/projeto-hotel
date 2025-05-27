@@ -35,7 +35,7 @@
                   <td><%= reserva.check_in.strftime('%d/%m/%Y') %></td>
                   <td><%= reserva.check_out.strftime('%d/%m/%Y') %></td>
                   <td><%= reserva.status || 'Confirmada' %></td>
-                  <td><%= reserva.user.nome %></td>
+                 <td><%= reserva.user.nome %></td>
                   <td class="d-flex gap-2">
                     <!-- Botão de Editar com ícone -->
                     <%= link_to edit_reserva_path(reserva), class: 'btn btn-warning btn-sm d-flex justify-content-center align-items-center p-2' do %>

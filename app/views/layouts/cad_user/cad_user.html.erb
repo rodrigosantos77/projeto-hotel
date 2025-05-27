@@ -3,144 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro de Usuario</title>
+  <title>Cadastro de Usuário</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 </head>
 <body>
   <div class="container mt-4">
-  <h1 class="text-center mt-4">Novo Usuário</h1>
-
-  
-          <div class="row justify-content-center">
-                <div class="col-md-6">
-        
-                    <% if @user.errors.any? %>
-                        <div class="alert alert-danger">
-                          <h4><%= pluralize(@user.errors.count, "erro") %> encontrado(s):</h4>
-                          <ul>
-                            <% @user.errors.full_messages.each do |message| %>
-                              <li><%= message %></li>
-                            <% end %>
-                          </ul>
-                        </div>
-                    <% end %>
-
-                <%= form_with model: @user, local: true, class: "card p-4 shadow-lg" do |form| %>
-          
-                <div class="mb-3">
-                  <%= form.label :username, "Usuário", class: "form-label" %>
-                  <%= form.text_field :username, class: "form-control", placeholder: "Digite seu nome de usuário" %>  
-                </div>
-
-                <div class="mb-3">
-                  <%= form.label :email, "E-mail", class: "form-label" %>
-                  <%= form.email_field :email, class: "form-control", placeholder: "Digite seu e-mail" %>
-                </div>
-
-                <div class="mb-3">
-                  <%= form.label :password, "Senha", class: "form-label" %>
-                  <%= form.password_field :password, class: "form-control", placeholder: "Digite sua senha" %>
-                </div>
-
-                <div class="mb-3">
-                  <%= form.label :password_confirmation, "Confirmar Senha", class: "form-label" %>
-                  <%= form.password_field :password_confirmation, class: "form-control", placeholder: "Confirme sua senha" %>
-                </div>
-
-                <div class="d-grid">
-                  <%= form.submit "Criar Usuário", class: "btn btn-primary" %>
-                </div>
-            <% end %>
-
-              <div class="text-center mt-3">
-                <%= link_to root_path, class: "btn btn-secondary" do %>
-                  <i class="fas fa-home"></i> Página Inicial
-                 <% end %>
-              </div>
-
-          </div>
-            </div>
-     
-
-  
-
-
-
-
-
-
+    <%= yield %>
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
--->
