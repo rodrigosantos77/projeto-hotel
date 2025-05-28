@@ -28,5 +28,10 @@ resources :quartos, only: [:index, :show]
   # Outras Rotas
   get '/sobre', to: 'sobre#index'
   get 'up', to: 'rails/health#show', as: :rails_health_check
+
+#rotas de suporte 
+post 'suporte', to: 'suporte#create'
+
+
 end
 
