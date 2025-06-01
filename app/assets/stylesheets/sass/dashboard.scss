@@ -1,36 +1,148 @@
-@import "config";
+// Paleta de Cores
+$verde-musgo: #6E7C50;
+$marrom-madeira: #8B6239;
+$bege-claro: #E6D3B3;
+$bege-escuro: #CBB793;
+$verde-escuro: #3C4B27;
+$branco-areia: #F5F0E6;
+$claro-amadeirado: #caa574;
 
-@import "config";
+.sidebar .logout-btn {
+  background-color: $verde-musgo;
+  color: $color-white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 2rem; // separa do menu
+  display: block;
+  text-decoration: none;
 
-// Estilos gerais da dashboard
-.dashboard-container {
-  background-color: $color-main-bg;
-  color: $color-text;
-  padding: 2rem;
+  &:hover {
+    background-color: darken($verde-escuro, 10%);
+  }
+}
+
+
+.dashboard {
+  display: flex;
   min-height: 100vh;
+  background-color: $bege-claro;
+  font-family: 'Ruda', sans-serif;
+  color: $verde-escuro;
 
-  h1, h2, h3 {
-    @include font-title;
-    color: $color-white;
+  /* faixa de madeira ou linha */
+  .separador {
+  background-color: #caa574;
+  height: 5px;
+  width: 80%;
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+
+
+  .sidebar {
+    background-color: $marrom-madeira;
+    color: $verde-escuro;
+    padding: 2rem;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
-  .card {
-    background-color: $color-second-bg;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba($color-black, 0.1);
-    margin-bottom: 1rem;
-  }
+  .content {
+    flex: 1;
+    padding: 2rem;
 
-  .btn {
-    background-color: $color-primary;
-    color: $color-white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
 
-    &:hover {
-      background-color: darken($color-primary, 10%);
+    .reserva {
+      display: flex;
+      align-items: center;
+      background-color: $bege-escuro;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+      img {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 1rem;
+      }
+
+      .info {
+        flex: 1;
+        p {
+          margin: 0.2rem 0;
+        }
+      }
+
+      .status {
+        font-weight: bold;
+        margin-right: 1rem;
+      }
+
+      .actions {
+        display: flex;
+        gap: 0.5rem;
+
+        .cancelar {
+          background-color: $marrom-madeira;
+          color: $branco-areia;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        .editar {
+          background-color: $verde-musgo;
+          color: $branco-areia;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
     }
   }
 }

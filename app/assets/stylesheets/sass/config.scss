@@ -47,16 +47,23 @@ $color-text-secondary: #6b4e36;
 $color-border: #d8cfc3;
 $color-icon: #4b2e1e;
 
+// Paleta de Cores Dashboard Cliente
+$primary-color: #4A90E2;
+$secondary-color: #50E3C2;
+$background-color: #F5F7FA;
+$text-color: #333333;
+$text-secondary-color: #7F8C8D;
+$border-color: #E0E0E0;
+$error-color: #E74C3C;
+$success-color: #27AE60;
 
 
 /* variaveis media-queries */
-
 $media-mobile-s:        320px;
 $media-mobile-m:        375px;
 $media-mobile-l:        425px;
 $media-tablet:          768px;
 $media-desktop:         1024px;
-
 
 //mixins de fontes
 

@@ -1,73 +1,36 @@
+<div class="dashboard">
+  <aside class="sidebar">
+    <h2>Olá, Rodrigo!</h2>
+      <div class="separador"></div>
+    <nav>
+      <ul>
+        <li><i class="icon">🎒</i> Minhas Reservas</li>
+        <li><i class="icon">👤</i> Meu Perfil</li>
+        <li><i class="icon">⏰</i> Histórico</li>
+      </ul>
+    </nav>
+    <%= link_to 'Sair', logout_path, method: :delete, class: 'logout-btn' %>
 
-<div class="min-h-screen bg-neutral-100 font-serif">
-  <!-- Topo -->
-  <header class="flex justify-between items-center p-4 bg-neutral-800 text-white shadow">
-    <h1 class="text-xl font-bold">Hotel Recanto</h1>
-    <div class="flex items-center space-x-4">
-      <span>Bem-vindo, <%= current_user.nome %></span>
-      <%= link_to 'Sair', logout_path, method: :delete, class: 'bg-red-600 hover:bg-red-700 px-3 py-1 rounded' %>
+  </aside>
+
+  <main class="content">
+    <h1>Minhas Reservas</h1>
+
+    <div class="reserva">
+      <img src="img_quarto1.jpg" alt="Imagem do quarto reservado">
+      <div class="info">
+        <p>Check-in: 20/06/2024</p>
+        <p>Check-out: 22/06/2024</p>
+        <p>2 pessoas</p>
+      </div>
+      <div class="status">Confirmada</div>
+      <div class="actions">
+        <button class="cancelar">Cancelar</button>
+        <button class="editar">Editar</button>
+      </div>
     </div>
-  </header>
-  
-  <!-- Conteúdo principal -->
-  <div class="flex">
-    <!-- Menu lateral -->
-    <aside class="w-64 bg-neutral-200 p-4 space-y-4">
-      <%= link_to 'Minhas Reservas', '#reservas', class: 'block p-2 rounded hover:bg-neutral-300' %>
-      <%= link_to 'Meu Perfil', '#perfil', class: 'block p-2 rounded hover:bg-neutral-300' %>
-      <%= link_to 'Suporte', '#suporte', class: 'block p-2 rounded hover:bg-neutral-300' %>
-    </aside>
-    
-    <!-- Área de conteúdo -->
-    <main class="flex-1 p-6 space-y-6">
-      <!-- Próxima reserva -->
-      <% if @reservas.any? %>
-        <% proxima_reserva = @reservas.find { |res| res.data_entrada >= Date.today } %>
-        <% if proxima_reserva %>
-          <section class="bg-white rounded shadow p-4">
-            <h2 class="text-lg font-semibold mb-2">Próxima Reserva</h2>
-            <p>Quarto: <%= proxima_reserva.quarto.numero %></p>
-            <p>Check-in: <%= l(proxima_reserva.data_entrada) %></p>
-            <p>Check-out: <%= l(proxima_reserva.data_saida) %></p>
-            <p>Status: <%= proxima_reserva.status %></p>
-          </section>
-        <% else %>
-          <section class="bg-white rounded shadow p-4">
-            <h2 class="text-lg font-semibold mb-2">Próxima Reserva</h2>
-            <p>Sem reservas futuras.</p>
-          </section>
-        <% end %>
-      <% end %>
 
-      <!-- Lista de reservas -->
-      <section id="reservas" class="bg-white rounded shadow p-4">
-        <h2 class="text-lg font-semibold mb-2">Minhas Reservas</h2>
-        <ul class="space-y-2">
-          <% @reservas.each do |reserva| %>
-            <li class="border-b pb-2">
-              Reserva #<%= reserva.id %> - Quarto <%= reserva.quarto.numero %> - <%= reserva.status %>
-            </li>
-          <% end %>
-        </ul>
-      </section>
+    <!-- Repetir bloco acima para outras reservas -->
 
-      <!-- Perfil -->
-      <section id="perfil" class="bg-white rounded shadow p-4">
-        <h2 class="text-lg font-semibold mb-2">Meus Dados</h2>
-        <p>Nome: <%= current_user.nome %></p>
-        <p>Email: <%= current_user.email %></p>
-        <%= link_to 'Editar Perfil', edit_user_path(current_user), class: 'text-blue-600 hover:underline' %>
-
-      </section>
-
-      <!-- Suporte -->
-      <section id="suporte" class="bg-white rounded shadow p-4">
-        <h2 class="text-lg font-semibold mb-2">Suporte</h2>
-        <%= form_with url: suporte_path, method: :post, local: true, class: "space-y-2" do |f| %>
-          <%= f.text_area :mensagem, class: "w-full p-2 border rounded", rows: 4, placeholder: "Escreva sua mensagem..." %>
-          <%= f.submit "Enviar", class: "bg-neutral-800 text-white px-4 py-2 rounded hover:bg-neutral-700" %>
-        <% end %>
-      </section>
-    </main>
-  </div>
+  </main>
 </div>
