@@ -7,22 +7,6 @@ $verde-escuro: #3C4B27;
 $branco-areia: #F5F0E6;
 $claro-amadeirado: #caa574;
 
-.sidebar .logout-btn {
-  background-color: $verde-musgo;
-  color: $color-white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 2rem; // separa do menu
-  display: block;
-  text-decoration: none;
-
-  &:hover {
-    background-color: darken($verde-escuro, 10%);
-  }
-}
-
 
 .dashboard {
   display: flex;
@@ -30,21 +14,14 @@ $claro-amadeirado: #caa574;
   background-color: $bege-claro;
   font-family: 'Ruda', sans-serif;
   color: $verde-escuro;
-
-  /* faixa de madeira ou linha */
-  .separador {
-  background-color: #caa574;
-  height: 5px;
-  width: 80%;
-  margin: 15px auto;
-  border-radius: 2px;
-}
+  position: relative;
+   border-right: 5px solid $verde-musgo; // uma linha divisória verde, por exemplo
 
 
-
+  /* menu Lateral */
   .sidebar {
     background-color: $marrom-madeira;
-    color: $verde-escuro;
+    border-right: 5px solid $verde-musgo;
     padding: 2rem;
     width: 250px;
     display: flex;
@@ -74,6 +51,25 @@ $claro-amadeirado: #caa574;
       }
     }
   }
+
+.sidebar .logout-btn {
+  background-color: $verde-musgo;
+  color: $color-white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 2rem; // separa do menu
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($verde-escuro, 10%);
+  }
+}
+/* Fim do menu Lateral */
+
+
 
   .content {
     flex: 1;
