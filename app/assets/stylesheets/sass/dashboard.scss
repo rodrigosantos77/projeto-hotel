@@ -1,143 +1,150 @@
-// Paleta de Cores
-$verde-musgo: #6E7C50;
-$marrom-madeira: #8B6239;
-$bege-claro: #E6D3B3;
-$bege-escuro: #CBB793;
-$verde-escuro: #3C4B27;
-$branco-areia: #F5F0E6;
-$claro-amadeirado: #caa574;
 
 
+/* Cores */
+$marrom-madeira: #8B5E3C;
+$verde-musgo: #6B8E23;
+$verde-escuro: #556B2F;
+$color-white: #fff;
+
+/* Layout principal */
 .dashboard {
   display: flex;
-  min-height: 100vh;
-  background-color: $bege-claro;
-  font-family: 'Ruda', sans-serif;
-  color: $verde-escuro;
-  position: relative;
-   border-right: 5px solid $verde-musgo; // uma linha divisória verde, por exemplo
-
-
-  /* menu Lateral */
-  .sidebar {
-    background-color: $marrom-madeira;
-    border-right: 5px solid $verde-musgo;
-    padding: 2rem;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    h2 {
-      font-size: 1.8rem;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-
-      li {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-.sidebar .logout-btn {
-  background-color: $verde-musgo;
-  color: $color-white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 2rem; // separa do menu
-  display: block;
-  text-decoration: none;
-
-  &:hover {
-    background-color: darken($verde-escuro, 10%);
-  }
+  height: 100vh; // ocupa a altura toda da tela
+  background-color: #f5e0b7; // cor do fundo geral
 }
-/* Fim do menu Lateral */
 
+/* menu Lateral */
+.sidebar {
+  background-color: #3e2c23; // tom mais escuro e elegante
+  padding: 2rem;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  color: $color-white;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
 
+  h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
 
-  .content {
-    flex: 1;
-    padding: 2rem;
+  .separador {
+    width: 100%;
+    height: 1px;
+    background-color: lighten($marrom-madeira, 20%);
+    margin-bottom: 1.5rem;
+  }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    .reserva {
+    li {
       display: flex;
       align-items: center;
-      background-color: $bege-escuro;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: $color-white;
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
 
-      img {
-        width: 120px;
-        height: 80px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-right: 1rem;
+      i.icon {
+        font-size: 1.2rem;
       }
 
-      .info {
-        flex: 1;
-        p {
-          margin: 0.2rem 0;
-        }
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
       }
+    }
+  }
 
-      .status {
-        font-weight: bold;
-        margin-right: 1rem;
+  .logout-btn {
+    margin-top: auto;
+    background-color: $verde-musgo;
+    color: $color-white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken($verde-musgo, 10%);
+    }
+  }
+}
+
+/* Conteúdo principal */
+.content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Bloco de reserva */
+.reserva {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .info {
+    flex: 1;
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  .status {
+    font-weight: bold;
+    color: green;
+    margin-right: 1rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+
+    .cancelar {
+      background-color: #a0522d;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(#a0522d, 10%);
       }
+    }
 
-      .actions {
-        display: flex;
-        gap: 0.5rem;
+    .editar {
+      background-color: $verde-musgo;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
 
-        .cancelar {
-          background-color: $marrom-madeira;
-          color: $branco-areia;
-          border: none;
-          padding: 0.5rem 1rem;
-          border-radius: 5px;
-          cursor: pointer;
-
-          &:hover {
-            opacity: 0.8;
-          }
-        }
-
-        .editar {
-          background-color: $verde-musgo;
-          color: $branco-areia;
-          border: none;
-          padding: 0.5rem 1rem;
-          border-radius: 5px;
-          cursor: pointer;
-
-          &:hover {
-            opacity: 0.8;
-          }
-        }
+      &:hover {
+        background-color: darken($verde-musgo, 10%);
       }
     }
   }

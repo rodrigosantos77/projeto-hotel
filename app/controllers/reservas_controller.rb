@@ -91,6 +91,6 @@ end
     
   # Define os parâmetros permitidos
   def reserva_params
-    params.require(:reserva).permit(:check_in, :check_out, :status, :quarto_id)
+    params.require(:reserva).permit(:check_in, :check_out, :status, :quarto_id, :numero_pessoas, :user_id)
   end  
 end

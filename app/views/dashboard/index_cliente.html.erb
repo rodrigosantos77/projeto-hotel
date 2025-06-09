@@ -1,10 +1,12 @@
 <div class="dashboard">
   <aside class="sidebar">
-    <h2>Olá, Rodrigo!</h2>
+ <h2>Olá, <%= current_user.username.split.first.capitalize %>!</h2>
+
       <div class="separador"></div>
     <nav>
       <ul>
         <li><i class="icon">🎒</i> Minhas Reservas</li>
+        <li><i class="icon">➕</i> <%= link_to 'Nova Reserva', new_reserva_path %></li>
         <li><i class="icon">👤</i> Meu Perfil</li>
         <li><i class="icon">⏰</i> Histórico</li>
       </ul>
@@ -13,24 +15,26 @@
 
   </aside>
 
-  <main class="content">
-    <h1>Minhas Reservas</h1>
-
-    <div class="reserva">
-      <img src="img_quarto1.jpg" alt="Imagem do quarto reservado">
-      <div class="info">
-        <p>Check-in: 20/06/2024</p>
-        <p>Check-out: 22/06/2024</p>
-        <p>2 pessoas</p>
+ <main class="content">
+  <h1>Minhas Reservas</h1>
+  <% @reservas.each do |reserva| %>
+    <div class="reserva mb-4 border p-3 rounded">
+      <img src="<%= image_path('quartos/quarto-1.jpeg') %>" alt="Imagem do quarto reservado" class="img-fluid mb-2" style="max-width: 300px;">
+      
+      <div class="info mb-2">
+        <p><strong>Quarto:</strong> <%= reserva.quarto.numero %></p>
+        <p><strong>Check-in:</strong> <%= reserva.check_in.strftime('%d/%m/%Y') %></p>
+        <p><strong>Check-out:</strong> <%= reserva.check_out.strftime('%d/%m/%Y') %></p>
+        <p><strong>Pessoas:</strong> <%= reserva.numero_pessoas %></p>
+        <p><strong>Status:</strong> <%= reserva.status || "Confirmada" %></p>
       </div>
-      <div class="status">Confirmada</div>
-      <div class="actions">
-        <button class="cancelar">Cancelar</button>
-        <button class="editar">Editar</button>
+      <div class="actions d-flex gap-2">
+        <%= link_to 'Cancelar', reserva_path(reserva), method: :delete, data: { confirm: 'Tem certeza que deseja cancelar a reserva?' }, class: "btn btn-danger btn-sm" %>
+        <%= link_to 'Editar', edit_reserva_path(reserva), class: "btn btn-warning btn-sm" %>
       </div>
     </div>
+  <% end %>
+</main>
 
-    <!-- Repetir bloco acima para outras reservas -->
 
-  </main>
 </div>

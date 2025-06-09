@@ -27,17 +27,22 @@
   </div>
 
   <!--CAMPOS DE SELECIONAR O QUARTO-->
-  <div class="mb-3">
+<div class="mb-3">
   <%= f.label :quarto_id, "Quarto" %>
   <%= f.collection_select :quarto_id, Quarto.all, :id, :numero, prompt: "Selecione um quarto", class: "form-control" %>
 </div>
 
+<!--CAMPOS DE NÚMERO DE PESSOAS -->
+<div class="mb-3">
+  <%= f.label :numero_pessoas, "Número de Pessoas" %>
+  <%= f.number_field :numero_pessoas, min: 1, class: "form-control", placeholder: "Ex: 2" %>
+</div>
 
 <!--CAMPOS DE STATUS -->
-  <div class="mb-3">
-    <%= f.label :status, "Status" %>
-    <%= f.select :status, ["Pendente", "Confirmada", "Cancelada"], class: "form-control" %>
-  </div>
+<div class="mb-3">
+  <%= f.label :status, "Status" %>
+  <%= f.select :status, ["Pendente", "Confirmada", "Cancelada"], class: "form-control" %>
+</div>
 
 
 <!--CAMPO BOTAO DE RESERVA-->
