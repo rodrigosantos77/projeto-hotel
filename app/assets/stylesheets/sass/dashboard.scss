@@ -1,3 +1,5 @@
+/* Fonte da Pagina */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
 
 /* Cores */
@@ -15,7 +17,12 @@ $color-white: #fff;
 
 /* menu Lateral */
 .sidebar {
-  background-color: #3e2c23; // tom mais escuro e elegante
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), // camada escura por cima
+    image-url("madeira_bg.png"); // imagem de fundo
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 2rem;
   width: 250px;
   display: flex;
@@ -27,7 +34,10 @@ $color-white: #fff;
     font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    line-height: 1.2;
+   // line-height: 1.2;
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+
   }
 
   .separador {
@@ -54,6 +64,9 @@ $color-white: #fff;
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.2s ease;
+      font-family: 'Merriweather', serif;
+      line-height: 1.6;
+
 
       i.icon {
         font-size: 1.2rem;
@@ -76,6 +89,8 @@ $color-white: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.2s ease;
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
 
     &:hover {
       background-color: darken($verde-musgo, 10%);
@@ -91,61 +106,114 @@ $color-white: #fff;
 
 /* Bloco de reserva */
 .reserva {
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 1rem;
-  border-radius: 10px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
 
-  img {
-    width: 120px;
+ img {
+    width: 160px;
     height: auto;
     border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
   }
 
   .info {
     flex: 1;
-    margin-left: 1rem;
-    font-size: 1rem;
+    margin-left: 1.5rem;
+    font-family: 'Merriweather', serif;
+
+    h4 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+      color: #333;
+    }
+
+    p {
+      margin: 0.2rem 0;
+      color: #444;
+    }
   }
 
-  .status {
+ .status {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background-color: #6B8E23; // verde-musgo
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
     font-weight: bold;
-    color: green;
-    margin-right: 1rem;
+    text-transform: uppercase;
   }
 
   .actions {
     display: flex;
+    flex-direction: column;
     gap: 0.5rem;
+    margin-left: 1rem;
 
-    .cancelar {
-      background-color: #a0522d;
-      color: white;
+    button {
+      padding: 0.4rem 0.9rem;
       border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-weight: bold;
       cursor: pointer;
+      font-family: 'Merriweather', serif;
 
-      &:hover {
-        background-color: darken(#a0522d, 10%);
+      &.cancelar {
+        background-color: #a0522d;
+        color: white;
+        &:hover {
+          background-color: darken(#a0522d, 10%);
+        }
       }
-    }
 
-    .editar {
-      background-color: $verde-musgo;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: darken($verde-musgo, 10%);
+      &.editar {
+        background-color: $verde-musgo;
+        color: white;
+        &:hover {
+          background-color: darken($verde-musgo, 10%);
+        }
       }
     }
   }
+
+}
+
+
+// Responsividade para a .reserva
+.reserva {
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .info {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+
+    .actions {
+      flex-direction: row;
+      justify-content: center;
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+}
+
+// Centralização do conteúdo principal
+.content {
+  max-width: 900px;
+  margin: 0 auto;
 }
