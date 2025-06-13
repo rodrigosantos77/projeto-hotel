@@ -106,114 +106,90 @@ $color-white: #fff;
 
 /* Bloco de reserva */
 .reserva {
+  margin-bottom: 20px; // ou o valor que você achar melhor (15px, 24px...)
   display: flex;
-  align-items: flex-start;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 1.2rem;
+  gap: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
   border-radius: 12px;
-  margin-bottom: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  position: relative;
 
- img {
+  img {
     width: 160px;
-    height: auto;
+    height: 120px;
     border-radius: 8px;
     object-fit: cover;
-    box-shadow: 0 0 6px rgba(0,0,0,0.1);
   }
 
   .info {
     flex: 1;
-    margin-left: 1.5rem;
-    font-family: 'Merriweather', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     h4 {
       font-size: 1.2rem;
       font-weight: bold;
-      margin-bottom: 0.4rem;
-      color: #333;
+      margin-bottom: 0.5rem;
     }
 
     p {
-      margin: 0.2rem 0;
-      color: #444;
+      margin: 0.3rem 0;
     }
   }
+}
 
- .status {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    background-color: #6B8E23; // verde-musgo
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  p {
+    font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
+    color: white;
+    background-color: $verde-musgo;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    margin: 0;
   }
 
-  .actions {
+  .d-flex {
     display: flex;
-    flex-direction: column;
     gap: 0.5rem;
-    margin-left: 1rem;
 
-    button {
-      padding: 0.4rem 0.9rem;
+    a {
+      padding: 0.4rem 0.8rem;
       border: none;
       border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
       font-family: 'Merriweather', serif;
+      font-size: 0.9rem;
+      text-decoration: none;
 
-      &.cancelar {
-        background-color: #a0522d;
-        color: white;
-        &:hover {
-          background-color: darken(#a0522d, 10%);
-        }
-      }
-
-      &.editar {
+      &.btn-editar {
         background-color: $verde-musgo;
         color: white;
         &:hover {
-          background-color: darken($verde-musgo, 10%);
+          background-color: $verde-escuro;
+        }
+      }
+
+      &.btn-cancelar {
+        background-color: #dc3545;
+        color: white;
+        &:hover {
+          background-color: #c82333;
         }
       }
     }
   }
-
 }
 
 
-// Responsividade para a .reserva
-.reserva {
-  flex-wrap: wrap;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    .info {
-      margin-left: 0;
-      margin-top: 1rem;
-    }
-
-    .actions {
-      flex-direction: row;
-      justify-content: center;
-      margin-left: 0;
-      margin-top: 1rem;
-    }
-  }
-}
-
-// Centralização do conteúdo principal
-.content {
-  max-width: 900px;
-  margin: 0 auto;
-}
+  

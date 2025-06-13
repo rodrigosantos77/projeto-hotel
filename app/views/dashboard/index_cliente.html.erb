@@ -1,46 +1,40 @@
+
 <div class="dashboard">
   <aside class="sidebar">
- <h2>Olá, <%= current_user.username.split.first.capitalize %>!</h2>
-
-      <div class="separador"></div>
+    <h2>Olá, <%= current_user.username.split.first.capitalize %>!</h2>
+    <div class="separador"></div>
     <nav>
-      <ul>
-        <li><i class="icon">🎒</i> Minhas Reservas</li>
-     <!-- <li><i class="icon">➕</i><%= link_to 'Nova Reserva', new_reserva_path %></li>-->
-
-        <li><i class="icon">➕</i>Nova Reserva</li>
-        <li><i class="icon">👤</i> Meu Perfil</li>
-        <li><i class="icon">⏰</i> Histórico</li>
+      <ul>   
+          <li><i class="icon">🎒</i> Minhas Reservas</li>
+          <li>
+          <i class="icon">➕</i>
+          <%= link_to 'Nova Reserva', new_reserva_path, class: 'text-white', style: 'text-decoration: none;' %>
+          </li>
+          <li><i class="icon">👤</i> Meu Perfil</li>
+          <li><i class="icon">⏰</i> Histórico</li>
       </ul>
     </nav>
     <%= link_to 'Sair', logout_path, method: :delete, class: 'logout-btn' %>
-
   </aside>
 
- <main class="content">
-  <h1 class="titulo-reservas mb-4">Minhas Reservas</h1>
-
-  <% @reservas.each do |reserva| %>
-  <div class="reserva">
-   <img src="<%= image_path('quartos/quarto-1.jpeg') %>" alt="Imagem do quarto reservado">
-
-    <div class="info">
-      <h4>Reserva: <%= reserva.id %></h4>
-      
-      <p><strong>Check-in:</strong> <%= reserva.check_in.strftime('%d/%m/%Y') %></p>
-        <p><strong>Check-out:</strong> <%= reserva.check_out.strftime('%d/%m/%Y') %></p>
-        <p><strong>Pessoas:</strong> <%= reserva.numero_pessoas %></p>
-      <p><strong>Quarto:</strong> <%= reserva.quarto.numero %></p>
-    </div>
-
-    <span class="status"><%= reserva.status || "Confirmada" %></span>
-
-    <div class="actions">
-      <%= link_to 'Cancelar', reserva_path(reserva), method: :delete, data: { confirm: 'Tem certeza que deseja cancelar esta reserva?' }, class: "cancelar" %>
-       <%= link_to 'Editar', edit_reserva_path(reserva), class: "btn btn-warning btn-sm" %>
-    </div>
+  <div class="content">
+    <h2>Minhas Reservas</h2>
+    <% @reservas.each do |reserva| %>
+      <div class="reserva">
+        <img src="<%= image_path('quartos/quarto-1.jpeg') %>" alt="Imagem do quarto reservado">
+        <div class="info">
+          <p><strong>Check-in:</strong> <%= reserva.check_in.strftime("%d/%m/%Y") %></p>
+          <p><strong>Check-out:</strong> <%= reserva.check_out.strftime("%d/%m/%Y") %></p>
+          <p><%= pluralize(reserva.numero_pessoas, "Pessoas") %></p>
+        </div>
+        <div class="actions">
+          <p><%= reserva.status.capitalize %></p>
+          <div class="d-flex gap-2">
+            <%= link_to "Cancelar", reserva_path(reserva), method: :patch, class: "btn-cancelar" %>
+            <%= link_to "Editar", edit_reserva_path(reserva), class: "btn-editar" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <% end %>
-</main>
-
 </div>
