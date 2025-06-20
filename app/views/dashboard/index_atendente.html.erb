@@ -1,60 +1,60 @@
-<div class="container">
-  <div class="d-flex justify-content-between align-items-center mb-4">
-    <h1 class="display-6">Bem-vindo ao Dashboard, <%= current_user.nome %>!</h1>
+<div class="dashboard-atendente">
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>Olá, <%= current_user.username.split.first.capitalize %>!</h2>
+      <div class="separador"></div>
+      <nav>
+        <ul>
+          <li><i class="icon">📋</i> Reservas</li>
+          <li><i class="icon">➕</i> <%= link_to 'Nova Reserva', new_reserva_path, class: 'text-white', style: 'text-decoration: none;' %></li>
+          <li><i class="icon">👤</i> <%= link_to 'Novo Cliente', new_user_path, class: 'text-white', style: 'text-decoration: none;' %></li>
+        </ul>
+      </nav>
+      <%= link_to 'Sair', logout_path, method: :delete, class: 'logout-btn' %>
+    </aside>
 
-    <div class="d-flex gap-2">
-      <%= link_to new_reserva_path, class: 'btn btn-success d-flex align-items-center px-3 py-2' do %>
-        <i class="fa fa-plus-circle me-2"></i>
-        <span>Nova Reserva</span>
-      <% end %>
-
-      <%= link_to new_user_path, class: 'btn btn-purple d-flex align-items-center px-3 py-2' do %>
-        <i class="fa fa-user-plus me-2"></i>
-        <span>Novo Cliente</span>
-      <% end %>
+    <div class="content">
+      <div class="tabela-reservas">
+        <table>
+          <thead>
+            <tr>
+              <th>Quarto</th>
+              <th>Check-in</th>
+              <th>Check-out</th>
+              <th>Status</th>
+              <th>Cliente</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @reservas.each do |reserva| %>
+              <tr id="reserva_<%= reserva.id %>">
+                <td><%= reserva.quarto.numero %></td>
+                <td><%= reserva.check_in.strftime('%d/%m/%Y') %></td>
+                <td><%= reserva.check_out.strftime('%d/%m/%Y') %></td>
+                <td>
+                  <span class="badge <%= reserva.status == 'Pendente' ? 'pendente' : 'confirmada' %>">
+                    <%= reserva.status || 'Confirmada' %>
+                  </span>
+                </td>
+                <td><%= reserva.user.nome %></td>
+                <td class="acoes">
+                  <%= link_to edit_reserva_path(reserva), class: 'btn-editar' do %>
+                    <i class="fa fa-edit" data-bs-toggle="tooltip" title="Editar"></i>
+                  <% end %>
+                  <%= link_to reserva_path(reserva),
+                              method: :delete,
+                              remote: true,
+                              data: { confirm: 'Tem certeza que deseja excluir esta reserva?' },
+                              class: 'btn-cancelar' do %>
+                    <i class="fa fa-trash" data-bs-toggle="tooltip" title="Excluir"></i>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-
-      <div class="table-responsive">    
-          <table class="table table-striped table-hover mt-4">
-            <thead class="table-dark">
-              <tr>
-                <th>Quarto</th>
-                <th>Check-in</th>
-                <th>Check-out</th>
-                <th>Status</th>
-                <th>Cliente</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @reservas.each do |reserva| %>
-                
-                <tr id="reserva_<%= reserva.id %>">
-                  <td><%= reserva.quarto.numero %></td>
-                  <td><%= reserva.check_in.strftime('%d/%m/%Y') %></td>
-                  <td><%= reserva.check_out.strftime('%d/%m/%Y') %></td>
-                  <td><%= reserva.status || 'Confirmada' %></td>
-                 <td><%= reserva.user.nome %></td>
-                  <td class="d-flex gap-2">
-                    <!-- Botão de Editar com ícone -->
-                    <%= link_to edit_reserva_path(reserva), class: 'btn btn-warning btn-sm d-flex justify-content-center align-items-center p-2' do %>
-                      <i class="fa fa-edit" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"></i> <!-- Apenas o ícone -->
-                    <% end %>
-                    
-                    <!-- Botão de excluir com ícone -->
-                          <%= link_to reserva_path(reserva), 
-                        method: :delete, 
-                        remote: true, 
-                        class: 'btn btn-danger btn-sm d-flex justify-content-center align-items-center p-2 delete-link', 
-                        data: { confirm: 'Tem certeza que deseja excluir esta reserva?' } do %>
-                        <i class="fa fa-trash" data-bs-toggle="tooltip" data-bs-placement="top" title="Excluir"></i>
-                        <% end %>
-
-                  </td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
-      </div>  
 </div>
