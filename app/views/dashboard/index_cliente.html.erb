@@ -11,8 +11,8 @@
           <i class="icon">➕</i>
           <%= link_to 'Nova Reserva', new_reserva_path, class: 'text-white', style: 'text-decoration: none;' %>
           </li>
-          <li><i class="icon">👤</i> Meu Perfil</li>
-          <li><i class="icon">⏰</i> Histórico</li>
+          <li><i class="icon">👤</i> <%= link_to 'Meu Perfil', perfil_path, class: 'text-white', style: 'text-decoration: none;' %></li>
+         <li><i class="icon">⏰</i> <%= link_to 'Histórico', historico_path, class: 'text-white', style: 'text-decoration: none;' %></li>
       </ul>
     </nav>
     <%= link_to 'Sair', logout_path, method: :delete, class: 'logout-btn' %>

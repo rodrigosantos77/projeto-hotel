@@ -1,0 +1,28 @@
+<h1>Histórico de Reservas</h1>
+
+<% if @reservas.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Quarto</th>
+        <th>Check-in</th>
+        <th>Check-out</th>
+        <th>Status</th>
+        <th>Data da Reserva</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @reservas.each do |reserva| %>
+        <tr>
+          <td><%= reserva.quarto.numero %></td>
+          <td><%= reserva.check_in.strftime('%d/%m/%Y') %></td>
+          <td><%= reserva.check_out.strftime('%d/%m/%Y') %></td>
+          <td><%= reserva.status %></td>
+          <td><%= reserva.created_at.strftime('%d/%m/%Y %H:%M') %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>Você ainda não fez nenhuma reserva.</p>
+<% end %>

@@ -13,6 +13,10 @@ class ReservasController < ApplicationController
     end
   end
   
+  # Exibe o historico de reservas
+  def historico
+  @reservas = current_user.reservas.order(created_at: :desc)
+end
 
   # Exibe uma reserva específica
   def show
@@ -91,6 +95,6 @@ end
     
   # Define os parâmetros permitidos
   def reserva_params
-    params.require(:reserva).permit(:check_in, :check_out, :status, :quarto_id, :numero_pessoas, :user_id)
+    params.require(:reserva).permit(:check_in, :check_out, :status, :quarto_id, :numero_pessoas)
   end  
 end

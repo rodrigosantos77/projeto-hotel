@@ -29,6 +29,13 @@ resources :quartos, only: [:index, :show]
   get '/sobre', to: 'sobre#index'
   get 'up', to: 'rails/health#show', as: :rails_health_check
 
+  #rota para visualizar meu perfil
+  get '/perfil', to: 'users#show', as: 'perfil'
+
+   #rota para visualizar meu perfil
+  get '/historico', to: 'reservas#historico', as: 'historico'
+
+
 #rotas de suporte 
 post 'suporte', to: 'suporte#create'
 
