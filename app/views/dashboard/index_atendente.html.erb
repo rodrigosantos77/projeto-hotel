@@ -37,7 +37,6 @@
                     <%= reserva.status || 'Confirmada' %>
                   </span>
                 </td>
-                
                 <td><%= reserva.user&.username || "Cliente não identificado" %></td>
                 <td class="acoes">
                   <%= link_to edit_reserva_path(reserva), class: 'btn-editar' do %>
