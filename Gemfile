@@ -1,7 +1,6 @@
 
 source "https://rubygems.org"
 
-ruby "3.3.3"
 gem 'font-awesome-sass', '~> 6.0.0' # Atualize para a versão mais recente disponível
 gem "rails", "~> 7.1.3", ">= 7.1.3.4"
 gem "sprockets-rails", "~> 3.5"
