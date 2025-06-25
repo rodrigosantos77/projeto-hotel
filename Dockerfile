@@ -13,7 +13,6 @@ ENV RAILS_ENV="production" \
     BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development"
 
-
 # Throw-away build stage to reduce size of final image
 FROM base as buildv2
 
@@ -24,18 +23,17 @@ RUN apt-get update -qq && \
 # Install application gems
 COPY Gemfile Gemfile.lock ./
 RUN bundle install && \
-    rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
-   # bundle exec bootsnap precompile --gemfile
+    rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
+    # bundle exec bootsnap precompile --gemfile (desabilitado)
 
 # Copy application code
 COPY . .
 
-# Precompile bootsnap code for faster boot times
-#RUN bundle exec bootsnap precompile app/ lib/
+# Precompile bootsnap code for faster boot times (desativado)
+# RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
-
 
 # Final stage for app image
 FROM base
@@ -49,10 +47,10 @@ RUN apt-get update -qq && \
 COPY --from=buildv2 /usr/local/bundle /usr/local/bundle
 COPY --from=buildv2 /rails /rails
 
-
 # Run and own only the runtime files as a non-root user for security
 RUN useradd rails --create-home --shell /bin/bash && \
     chown -R rails:rails db log storage tmp
+
 USER rails:rails
 
 # Entrypoint prepares the database.
