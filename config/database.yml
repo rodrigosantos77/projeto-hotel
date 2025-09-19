@@ -15,7 +15,7 @@ test:
   database: pagina_web_test
 
 production:
-  <<: *default
-  database: pagina_web_production
-  username: postgres
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
