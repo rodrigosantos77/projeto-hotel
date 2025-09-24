@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:new, :create]
   
   # Define o layout para as ações específicas
   layout 'cad_user/cad_user', only: [:new]
