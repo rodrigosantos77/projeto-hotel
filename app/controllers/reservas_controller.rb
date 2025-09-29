@@ -4,19 +4,19 @@ class ReservasController < ApplicationController
   before_action :set_reserva, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-  # Lista todas as reservas
-  def index
-    if current_user.atendente?
-      @reservas = Reserva.all.order(check_in: :asc)
-    else
-      @reservas = current_user.reservas.order(check_in: :asc)
-    end
+ # Lista todas as reservas
+def index
+  if current_user.atendente?
+    @reservas = Reserva.order(check_in: :asc).page(params[:page]).per(10)
+  else
+    @reservas = current_user.reservas.order(check_in: :asc).page(params[:page]).per(10)
   end
+end
 
-  # Histórico de reservas
-  def historico
-    @reservas = current_user.reservas.order(created_at: :desc)
-  end
+# Histórico de reservas
+def historico
+  @reservas = current_user.reservas.order(created_at: :desc).page(params[:page]).per(10)
+end
 
   # Exibe uma reserva específica
   def show; end
