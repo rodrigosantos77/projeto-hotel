@@ -1,0 +1,60 @@
+
+/* Estilo customizado para formulários de usuário */
+
+/* Containers e grupos */
+.form-group-custom {
+  margin-bottom: 1.2rem;
+}
+
+/* Labels */
+.form-label-custom {
+  font-weight: 600;
+  color: #2c3e50; /* azul-acinzentado elegante */
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* Inputs */
+.form-control-custom {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus {
+    border-color: #46611f; // verde escuro no hover
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.2);
+    outline: 0;
+  }
+}
+
+/* Botão principal */
+.btn-primary-custom {
+  background-color: #5d7d2b; // verde principal
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+  color: $color-white;
+
+  &:hover {
+    background-color: #46611f; // verde escuro no hover
+  }
+}
+
+/* Ajuste para mensagens de erro */
+.alert-danger {
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  .form-group-custom {
+    margin-bottom: 1rem;
+  }
+}
