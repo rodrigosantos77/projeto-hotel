@@ -192,4 +192,36 @@ $color-white: #fff;
 }
 
 
+/* Paginação */
+.pagination {
+  justify-content: center; // centraliza a paginação na tela
+
+  .page-item {
+    .page-link {
+      color: #5c3d2e; // marrom dos botões inativos
+      background-color: transparent;
+      border: none;
+
+      &:hover {
+        background-color: #46611f; // verde escuro no hover
+        color: #fff;
+        border-radius: 6px;
+      }
+    }
+
+    &.active .page-link {
+      background-color: #5d7d2b; // verde principal
+      color: #fff;
+      border-radius: 6px;
+    }
+
+    &.disabled .page-link {
+      color: #ccc; // cinza para desativado
+      pointer-events: none;
+      background-color: transparent;
+    }
+  }
+}
+
+
   

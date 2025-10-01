@@ -1,0 +1,55 @@
+
+.perfil-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fdfaf4;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.perfil-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #5a3e1b; // marrom da tua sidebar
+  text-align: center;
+}
+
+.perfil-card p {
+  font-size: 1rem;
+  margin: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.perfil-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-editar {
+  background-color: #4CAF50; // verde igual ao botão "Sair"
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-editar:hover {
+  background-color: #45a049;
+}
+
+.btn-voltar {
+  background-color: #d9534f; // vermelho (mesmo estilo do "Cancelar")
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-voltar:hover {
+  background-color: #c9302c;
+}

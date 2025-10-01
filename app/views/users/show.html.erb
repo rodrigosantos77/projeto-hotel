@@ -1,27 +1,16 @@
 
+<div class="perfil-container">
+  <h2 class="perfil-title">Meu Perfil</h2>
 
-<h<h1>Meu Perfil</h1>
+  <div class="perfil-card">
+    <p><i class="icon">👤</i> <strong>Nome:</strong> <%= @user.nome.presence || @user.username %></p>
+    <p><i class="icon">📧</i> <strong>Email:</strong> <%= @user.email %></p>
+    <p><i class="icon">🆔</i> <strong>CPF:</strong> <%= @user.cpf %></p>
+    <p><i class="icon">📞</i> <strong>Telefone:</strong> <%= @user.phone %></p>
+  </div>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @user.nome.presence || @user.username %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>CPF:</strong>
-  <%= @user.cpf %>
-</p>
-
-<p>
-  <strong>Telefone:</strong>
-  <%= @user.phone %>
-</p>
-
-<!-- Links de ação -->
-<%= link_to 'Editar Perfil', edit_user_path(@user), class: 'btn btn-primary' %>
-<%= link_to 'Voltar', dashboard_path, class: 'btn btn-secondary' %>
+  <div class="perfil-actions">
+    <%= link_to '✏️ Editar Perfil', edit_user_path(@user), class: 'btn-editar' %>
+    <%= link_to '⬅️ Voltar', dashboard_path, class: 'btn-voltar' %>
+  </div>
+</div>
