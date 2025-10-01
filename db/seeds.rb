@@ -1,9 +1,45 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# db/seeds.rb
+
+puts "Criando Quartos Iniciais..."
+
+Quarto.find_or_create_by!(numero: "01") do |q|
+  q.tipo = "Standard"
+  q.status = "Disponível"
+end
+
+Quarto.find_or_create_by!(numero: "02") do |q|
+  q.tipo = "standard"
+  q.status = "Disponível"
+end
+
+Quarto.find_or_create_by!(numero: "03") do |q|
+  q.tipo = "standard"
+  q.status = "Disponível"
+end
+
+
+Quarto.find_or_create_by!(numero: "04") do |q|
+  q.tipo = "standard"
+  q.status = "Disponível"
+end
+
+
+Quarto.find_or_create_by!(numero: "05") do |q|
+  q.tipo = "standard"
+  q.status = "Disponível"
+end
+
+
+Quarto.find_or_create_by!(numero: "06") do |q|
+  q.tipo = "standard"
+  q.status = "Disponível"
+end
+
+
+Quarto.find_or_create_by!(numero: "07") do |q|
+  q.tipo = "standard"
+  q.status = "Disponível"
+end
+# Adicione todos os outros quartos necessários aqui!
+
+puts "Quartos criados com sucesso!"
